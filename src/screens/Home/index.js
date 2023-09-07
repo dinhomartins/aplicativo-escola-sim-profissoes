@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import {
   Button,
   Platform,
@@ -10,16 +10,16 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
-} from 'react-native';
+} from "react-native";
 
-const STYLES = ['default', 'dark-content', 'light-content'];
-const TRANSITIONS = ['fade', 'slide', 'none'];
+const STYLES = ["default", "dark-content", "light-content"];
+const TRANSITIONS = ["fade", "slide", "none"];
 
 const HomeScreen = ({ navigation }) => {
   const [hidden, setHidden] = useState(false);
   const [statusBarStyle, setStatusBarStyle] = useState(STYLES[0]);
   const [statusBarTransition, setStatusBarTransition] = useState(
-    TRANSITIONS[0],
+    TRANSITIONS[0]
   );
 
   const changeStatusBarVisibility = () => setHidden(!hidden);
@@ -43,6 +43,7 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
+  
     <SafeAreaView style={styles.container}>
       <StatusBar
         animated={true}
@@ -51,124 +52,162 @@ const HomeScreen = ({ navigation }) => {
         showHideTransition={statusBarTransition}
         hidden={hidden}
       />
-      
-      <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.containerTopoContent}>
-          <View style={styles.containerTopo}>
-            <Text style={styles.textoColor}>
-              Cursos {"\n"}Profissionalizantes
-            </Text>
+ <ScrollView>
+     
+        <View style={styles.container}>
+          <View style={styles.containerTopoContent}>
+            <View style={styles.containerTopo}>
+              <Text style={styles.textoColor}>
+                Cursos {"\n"}Profissionalizantes
+              </Text>
+            </View>
+            <Text style={styles.tituloHome}>Calculos Eletricos</Text>
           </View>
-          <Text style={styles.tituloHome}>Área de atuação</Text>
-        </View>
-        <View style={styles.areaDeAtuacao}>
-          <View style={styles.containerCirculo}>
-            <View style={styles.circulo}>
-              <Image
-                style={styles.iconeCirculo}
-                source={require("../../../assets/eletric.png")}
-              />
+          <View style={styles.areaDeAtuacao}>
+            <View style={styles.containerCirculo}>
+              <View style={styles.circulo}>
+                <TouchableOpacity
+                  style={styles.iconeCirculo}
+                  onPress={() => navigation.navigate("CalculadoraCorrente")}
+                >
+                  <View>
+                    <Image
+                      style={styles.iconeCirculo}
+                      source={require("../../../assets/eletric.png")}
+                    />
+                  </View>
+                </TouchableOpacity>
+                
+              </View>
+              <Text style={styles.textoCirculo}>Watts para Corrente</Text>
             </View>
-            <Text style={styles.textoCirculo}>Eletricista</Text>
+
+            <View style={styles.containerCirculo}>
+              <View style={styles.circulo}>
+                <TouchableOpacity
+                  style={styles.iconeCirculo}
+                  onPress={() => navigation.navigate("CalculadoraPotencia")}
+                >
+                  <View>
+                    <Image
+                      style={styles.iconeCirculo}
+                      source={require("../../../assets/comando.png")}
+                    />
+                  </View>
+                </TouchableOpacity>
+                
+              </View>
+              <Text style={styles.textoCirculo}> Corrente para Watts </Text>
+            </View>
+
+            <View style={styles.containerCirculo}>
+              <View style={styles.circulo}>
+                <TouchableOpacity
+                  style={styles.iconeCirculo}
+                  onPress={() => navigation.navigate("CalculadoraBitolaCabo")}
+                >
+                  <View>
+                    <Image
+                      style={styles.iconeCirculo}
+                      source={require("../../../assets/bitolacalc.png")}
+                    />
+                  </View>
+                </TouchableOpacity>
+                
+              </View>
+              <Text style={styles.textoCirculo}>Calcular seção cabo</Text>
+            </View>
+
+
+
+
+            <View style={styles.containerCirculo}>
+              <View style={styles.circulo}>
+                <TouchableOpacity
+                  style={styles.iconeCirculo}
+                  onPress={() => navigation.navigate("CalculadoraDisjuntor")}
+                >
+                  <View>
+                    <Image
+                      style={styles.iconeCirculo}
+                      source={require("../../../assets/calcdisjuntor.png")}
+                    />
+                  </View>
+                </TouchableOpacity>
+                
+              </View>
+              <Text style={styles.textoCirculo}>Calcular Disjuntor</Text>
+            </View>
           </View>
-          <View style={[styles.containerCirculo, styles.alinhamentoTop]}>
-            <View style={styles.circulo}>
-              <Image
-                style={styles.iconeCirculo}
-                source={require("../../../assets/comando.png")}
-              />
-            </View>
-            <Text style={styles.textoCirculo}>Comando</Text>
+
+          <View style={styles.faixaCursosDisponiveis}>
+            <Text style={styles.tituloHome}>Cursos Disponiveis</Text>
           </View>
 
-          <View style={styles.containerCirculo}>
-            <View style={styles.circulo}>
-              <Image
-                style={styles.iconeCirculo}
-                source={require("../../../assets/air2.png")}
-              />
-            </View>
-            <Text style={styles.textoCirculo}>Ar Cond</Text>
-          </View>
-
-          <View style={styles.containerCirculo}>
-            <View style={styles.circulo}>
-              <Image
-                style={styles.iconeCirculo}
-                source={require("../../../assets/free2.png")}
-              />
-            </View>
-            <Text style={styles.textoCirculo}>Geladeira</Text>
-          </View>
-        </View>
-
-        <View style={styles.faixaCursosDisponiveis}>
-          <Text style={styles.tituloHome}>Cursos Disponiveis</Text>
-        </View>
-
-        <TouchableOpacity  style={[styles.boxMenu, styles.shadowProp]} onPress={() => navigation.navigate('Eletricista')}>
-            <View style={styles.contentBoxMenuLeft} >
-                  
-            <Image
-            style={styles.icone}
-            source={require('../../../assets/eletricista.png')}  />
-           
-            </View>
-
-            <View style={styles.contentBoxMenu}>
-            <Text style={styles.textoBoxMenu} >Eletricista Residencial</Text>
-            </View>
-
-        </TouchableOpacity >
-
-        <View style={styles.boxMenu}>
+          <TouchableOpacity
+            style={[styles.boxMenu, styles.shadowProp]}
+            onPress={() => navigation.navigate("Eletricista")}
+          >
             <View style={styles.contentBoxMenuLeft}>
-            
-            <Image
-            style={styles.icone}
-            source={require('../../../assets/air.png')}  />
-           
+              <Image
+                style={styles.icone}
+                source={require("../../../assets/eletricista.png")}
+              />
             </View>
 
             <View style={styles.contentBoxMenu}>
-            <Text style={styles.textoBoxMenu} >Instalação e {'\n'}manutenção de {'\n'}ar condicionado split</Text>
+              <Text style={styles.textoBoxMenu}>Eletricista Residencial</Text>
             </View>
+          </TouchableOpacity>
 
-        </View >
-
-        <View style={styles.boxMenu}>
+          <View style={styles.boxMenu}>
             <View style={styles.contentBoxMenuLeft}>
-            
-            <Image
-            style={styles.icone}
-            source={require('../../../assets/freezer.png')}  />
-           
+              <Image
+                style={styles.icone}
+                source={require("../../../assets/air.png")}
+              />
             </View>
 
             <View style={styles.contentBoxMenu}>
-            <Text style={styles.textoBoxMenu} >Manutenção de {'\n'}Geladeira</Text>
+              <Text style={styles.textoBoxMenu}>
+                Instalação e {"\n"}manutenção de {"\n"}ar condicionado split
+              </Text>
             </View>
+          </View>
 
-        </View >
-
-        <View style={styles.boxMenu}>
+          <View style={styles.boxMenu}>
             <View style={styles.contentBoxMenuLeft}>
-            
-            <Image
-            style={styles.icone}
-            source={require('../../../assets/lavar.png')}  />
-           
+              <Image
+                style={styles.icone}
+                source={require("../../../assets/freezer.png")}
+              />
             </View>
 
             <View style={styles.contentBoxMenu}>
-            <Text style={styles.textoBoxMenu} >Manutenção de {'\n'}Maquina de lavar</Text>
+              <Text style={styles.textoBoxMenu}>
+                Manutenção de {"\n"}Geladeira
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.boxMenu}>
+            <View style={styles.contentBoxMenuLeft}>
+              <Image
+                style={styles.icone}
+                source={require("../../../assets/lavar.png")}
+              />
             </View>
 
-        </View >
-      </View>
-    </ScrollView>
+            <View style={styles.contentBoxMenu}>
+              <Text style={styles.textoBoxMenu}>
+                Manutenção de {"\n"}Maquina de lavar
+              </Text>
+            </View>
+          </View>
+        </View>
+        </ScrollView>
     </SafeAreaView>
+    
   );
 };
 
@@ -179,17 +218,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignContent: "center",
     flexWrap: "wrap",
-
+  },
+  scrollView:{
+    flex: 1
   },
   containerTopoContent: {
     flexDirection: "column",
     width: "100%",
-
   },
   tituloHome: {
     fontSize: 18,
     marginLeft: 10,
-    marginTop:10
+    marginTop: 10,
   },
 
   areaDeAtuacao: {
@@ -211,96 +251,91 @@ const styles = StyleSheet.create({
     height: 40,
   },
   boxMenu: {
-    width: '95%', 
-    height: 96, 
-    backgroundColor: '#f5f5f5',
+    width: "95%",
+    height: 96,
+    backgroundColor: "#f5f5f5",
     margin: 5,
     borderRadius: 8,
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 10
-},
-icone:{
-  width: 80,
-  height: 80
-},
-textoBoxMenu:{
-  fontSize: 18
-},
-contentBoxMenu:{
-  width: '70%',
-  flexWrap: 'wrap',
-  maxWidth: 200 
-},
-contentBoxMenuLeft:{
-  width: '30%',
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 10,
+  },
+  icone: {
+    width: 80,
+    height: 80,
+  },
+  textoBoxMenu: {
+    fontSize: 18,
+  },
+  contentBoxMenu: {
+    width: "70%",
+    flexWrap: "wrap",
+    maxWidth: 200,
+  },
+  contentBoxMenuLeft: {
+    width: "30%",
+  },
+  containerCirculo: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
+  faixaCursosDisponiveis: {
+    width: "100%",
+    marginBottom: 20,
+  },
+  circulo: {
+    width: 70,
+    height: 70,
+    backgroundColor: "#1F9EAF",
+    margin: 5,
+    borderRadius: 50,
+    alignContent: "center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  textoCirculo: {
+    textAlign: "center",
+  },
+  containerTopo: {
+    height: 150,
+    width: "100%",
 
-},
-containerCirculo:{
-  justifyContent: 'center',
-  alignItems: 'center',
-  flex: 1,
-
-},
-faixaCursosDisponiveis:{
-  width: '100%',
-  marginBottom: 20
-},
-circulo: {
-  width: 70, 
-  height:70, 
-  backgroundColor: '#1F9EAF',
-  margin: 5,
-  borderRadius: 50,
-  alignContent: 'center',
-justifyContent: 'center',
-alignItems: 'center'
-  
-},
-textoCirculo:{
-  textAlign: 'center'
-},
-containerTopo: {
-  height: 150,
-  width: '100%',
-
-  backgroundColor: '#1F9EAF',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  flexWrap: 'wrap',
-  alignItems: 'center',
-  justifyContent: 'center'
-
-},
-containerTopoContent:{
-  flexDirection: 'column',
-   width:'100%'
-  
-},
-areaDeAtuacao:{
-  height: 150,
-  width: '100%',
-  padding: 10,
-  flexDirection: 'row',
-  justifyContent: 'center',
-  flexWrap: 'wrap',
-  alignItems: 'center',
-},
-alinhamentoTop:{
-  marginTop: 10
-},
-textoColor:{
-  color: '#fff',
-  fontSize: 24,
-  textAlign: 'center',
-  marginTop: 70
-},
-shadowProp: {  
-  shadowOffset: {width: -2, height: 4},  
-  shadowColor: '#171717',  
-  shadowOpacity: 0.5,  
-  shadowRadius: 3,  
-}
+    backgroundColor: "#1F9EAF",
+    flexDirection: "row",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  containerTopoContent: {
+    flexDirection: "column",
+    width: "100%",
+  },
+  areaDeAtuacao: {
+    height: 150,
+    width: "100%",
+    padding: 10,
+    flexDirection: "row",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    alignItems: "center",
+  },
+  alinhamentoTop: {
+    marginTop: 10,
+  },
+  textoColor: {
+    color: "#fff",
+    fontSize: 24,
+    textAlign: "center",
+    marginTop: 70,
+  },
+  shadowProp: {
+    shadowOffset: { width: -2, height: 4 },
+    shadowColor: "#171717",
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+  },
 });
 
 export default HomeScreen;

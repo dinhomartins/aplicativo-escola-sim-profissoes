@@ -6,6 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/Home';
 import DetalhesScreen from './src/screens/Detalhes'
 import EletricistaScreen from './src/screens/Eletricista'
+import CalculadoraCorrente from './src/screens/Calculos/CalcEletricia/PotenciaToCorrente'
+import CalculadoraPotencia from './src/screens/Calculos/CalcEletricia/CorrenteToPotencia'
+import CalculadoraBitolaCabo from './src/screens/Calculos/CalcEletricia/Bitola'
+import CalculadoraDisjuntor from './src/screens/Calculos/CalcEletricia/CalcDisjuntor'
+
 
 import EletricistaAula01 from './src/screens/Eletricista/Aula01';
 import EletricistaAula02 from './src/screens/Eletricista/Aula02';
@@ -40,6 +45,7 @@ import EletricistaAula29 from './src/screens/Eletricista/Aula29';
 
 
 
+
 const Stack = createNativeStackNavigator();
 
 
@@ -59,6 +65,50 @@ export default function App() {
                 <Stack.Screen name="Eletricista" component={EletricistaScreen}
         options={{
           title: 'Eletricista Residencial',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />
+
+<Stack.Screen name="CalculadoraCorrente" component={CalculadoraCorrente}
+        options={{
+          title: 'Conceitos elétricos',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />
+
+<Stack.Screen name="CalculadoraPotencia" component={CalculadoraPotencia}
+        options={{
+          title: 'Conceitos elétricos',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />
+
+<Stack.Screen name="CalculadoraBitolaCabo" component={CalculadoraBitolaCabo}
+        options={{
+          title: 'Conceitos elétricos',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />
+
+<Stack.Screen name="CalculadoraDisjuntor" component={CalculadoraDisjuntor}
+        options={{
+          title: 'Conceitos elétricos',
           headerStyle:{
             backgroundColor: '#1F9EAF'
           },
