@@ -42,9 +42,24 @@ import EletricistaAula27 from './src/screens/Eletricista/Aula27';
 import EletricistaAula28 from './src/screens/Eletricista/Aula28';
 import EletricistaAula29 from './src/screens/Eletricista/Aula29';
 
+import ComandoAula01     from './src/screens/Detalhes/CmdAula01';
+import Cmd01 from './src/screens/Comando/Cmd01';
+import Cmd02 from './src/screens/Comando/Cmd02';
+import Comando from './src/screens/Comando';
+import Cmd03 from './src/screens/Comando/Cmd03';
+import Cmd03TabelaBotoeira from './src/screens/Comando/Cmd03/tabelabotoeira';
 
-
-
+import Cmd04 from './src/screens/Comando/Cmd04';
+import Cmd05 from './src/screens/Comando/Cmd05';
+import Cmd06 from './src/screens/Comando/Cmd06';
+import Sinaleirotabela from './src/screens/Comando/Cmd06/sinanaleirotabela';
+import Cmd07 from './src/screens/Comando/Cmd07';
+import Cmd08 from './src/screens/Comando/Cmd08';
+import Cmd09 from './src/screens/Comando/Cmd09';
+import Dg from './src/screens/Comando/Cmd09/dg';
+import Dg2 from './src/screens/Comando/Cmd09/dg2';
+import Dg3 from './src/screens/Comando/Cmd09/dg3';
+import Cmd10 from './src/screens/Comando/Cmd10';
 
 const Stack = createNativeStackNavigator();
 
@@ -452,9 +467,186 @@ export default function App() {
           // headerShown: false
         }}  />  
 
+<Stack.Screen name="Cmd01" component={Cmd01}
+        options={{
+          title: 'Tabela Seção dos cabos',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />  
+
+<Stack.Screen name="Cmd02" component={Cmd02}
+        options={{
+          title: 'Tabela Seção dos cabos',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />  
+
+<Stack.Screen name="Comando" component={Comando}
+        options={{
+          title: 'Tabela Seção dos cabos',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />  
+
+<Stack.Screen name="Cmd03" component={Cmd03}
+        options={{
+          title: 'Tabela Seção dos cabos',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />  
+
+<Stack.Screen name="Cmd03TabelaBotoeira" component={Cmd03TabelaBotoeira}
+        options={{
+          title: 'Tabela cores botoeira',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />  
+
+<Stack.Screen name="Cmd04" component={Cmd04}
+        options={{
+          title: 'Contator',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd05" component={Cmd05}
+        options={{
+          title: 'Temporizador',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd06" component={Cmd06}
+        options={{
+          title: 'Sinaleiro',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Sinaleirotabela" component={Sinaleirotabela}
+        options={{
+          title: 'Tabela cores Sinaleiro',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd07" component={Cmd07}
+        options={{
+          title: 'Sinaleiro',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd08" component={Cmd08}
+        options={{
+          title: 'Réle falta de fase',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd09" component={Cmd09}
+        options={{
+          title: 'Simbologia comando eletrico',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Dg" component={Dg}
+        options={{
+          title: 'Simbologia comando eletrico',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Dg2" component={Dg2}
+        options={{
+          title: 'Simbologia comando eletrico',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Dg3" component={Dg3}
+        options={{
+          title: 'Simbologia comando eletrico',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd10" component={Cmd10}
+        options={{
+          title: 'Fechamento motor 6 pontas',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
 
 
       </Stack.Navigator>
+
+      
 
     </NavigationContainer>
   );

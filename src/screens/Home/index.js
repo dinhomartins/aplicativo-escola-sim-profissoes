@@ -160,6 +160,22 @@ const HomeScreen = ({ navigation }) => {
             </View>
           </TouchableOpacity>
 
+          <TouchableOpacity
+            style={[styles.boxMenu, styles.shadowProp]}
+            onPress={() => navigation.navigate("Comando")}
+          >
+            <View style={styles.contentBoxMenuLeft}>
+              <Image
+                style={styles.icone}
+                source={require("../../../assets/comandoeletrico.png")}
+              />
+            </View>
+
+            <View style={styles.contentBoxMenu}>
+              <Text style={styles.textoBoxMenu}>Comando Eletrio</Text>
+            </View>
+          </TouchableOpacity>
+
           <View style={styles.boxMenu}>
             <View style={styles.contentBoxMenuLeft}>
               <Image
@@ -170,7 +186,7 @@ const HomeScreen = ({ navigation }) => {
 
             <View style={styles.contentBoxMenu}>
               <Text style={styles.textoBoxMenu}>
-                Instalação e {"\n"}manutenção de {"\n"}ar condicionado split
+               Comando {"\n"}manutenção de {"\n"}ar condicionado split
               </Text>
             </View>
           </View>
