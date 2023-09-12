@@ -81,8 +81,28 @@ import Cmd19 from './src/screens/Comando/Cmd19';
 import Cmd19Diagrama from './src/screens/Comando/Cmd19/cmd19Diagrama';
 import Cmd20 from './src/screens/Comando/Cmd20';
 import Cmd20Diagrama from './src/screens/Comando/Cmd20/cmd20Diagrama';
-
-
+import Cmd21 from './src/screens/Comando/Cmd21';
+import Cmd21Diagrama from './src/screens/Comando/Cmd21/cmd21Diagrama';
+import Cmd22 from './src/screens/Comando/Cmd22';
+import Cmd22Diagrama from './src/screens/Comando/Cmd22/cmd22Diagrama';
+import Cmd23 from './src/screens/Comando/Cmd23'
+import Cmd23Diagrama from './src/screens/Comando/Cmd23/cmd23Diagrama';
+import Cmd24 from './src/screens/Comando/Cmd24'
+import Cmd24Diagrama from './src/screens/Comando/Cmd24/cmd24Diagrama';
+import Cmd25 from './src/screens/Comando/Cmd25'
+import Cmd25Diagrama from './src/screens/Comando/Cmd25/cmd25Diagrama';
+import Cmd26 from './src/screens/Comando/Cmd26'
+import Cmd26Diagrama from './src/screens/Comando/Cmd26/cmd26Diagrama26';
+import Cmd27 from './src/screens/Comando/Cmd27'
+import Cmd27Diagrama from './src/screens/Comando/Cmd27/cmd27Diagrama';
+import Cmd28 from './src/screens/Comando/Cmd28'
+import Cmd28Diagrama from './src/screens/Comando/Cmd28/cmd28Diagrama';
+import Cmd29 from './src/screens/Comando/Cmd29'
+import Cmd29Diagrama from './src/screens/Comando/Cmd29/cmd29Diagrama';
+import Cmd30 from './src/screens/Comando/Cmd30'
+import Cmd30Diagrama from './src/screens/Comando/Cmd30/cmd30Diagrama';
+import Cmd31 from './src/screens/Comando/Cmd31'
+import Cmd31Diagrama from './src/screens/Comando/Cmd31/cmd31Diagrama';
 
 
 const Stack = createNativeStackNavigator();
@@ -877,13 +897,250 @@ export default function App() {
           // headerShown: false
         }}  /> 
 
+<Stack.Screen name="Cmd21" component={Cmd21}
+        options={{
+          title: 'Arraque',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // hea
+        }}  /> 
+
+<Stack.Screen name="Cmd21Diagrama" component={Cmd21Diagrama}
+        options={{
+          title: 'Diagrama de Estrela triangulo unifilar',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+<Stack.Screen name="Cmd22" component={Cmd22}
+        options={{
+          title: 'Comando automatico e manual caixa',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // hea
+        }}  /> 
+
+<Stack.Screen name="Cmd22Diagrama" component={Cmd22Diagrama}
+        options={{
+          title: 'Comando automatico e manual caixa',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd23" component={Cmd23}
+        options={{
+          title: 'Comando automatico e manual caixa',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd23Diagrama" component={Cmd23Diagrama}
+        options={{
+          title: 'Comando automatico e manual caixa',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd24" component={Cmd24}
+        options={{
+          title: 'Chave reversora com sinalizador',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd24Diagrama" component={Cmd24Diagrama}
+        options={{
+          title: 'Chave reversora com sinalizador',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd25" component={Cmd25}
+        options={{
+          title: 'Partida direta sem selo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd25Diagrama" component={Cmd25Diagrama}
+        options={{
+          title: 'Partida direta sem selo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd26" component={Cmd26}
+        options={{
+          title: 'Circuito em cascata',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd26Diagrama" component={Cmd26Diagrama}
+        options={{
+          title: 'Circuito em cascata',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd27" component={Cmd27}
+        options={{
+          title: 'Contato de selo unifilar',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd27Diagrama" component={Cmd27Diagrama}
+        options={{
+          title: 'Contato de selo unifilar',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd28" component={Cmd28}
+        options={{
+          title: 'Partida de bombas intercaladas',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd28Diagrama" component={Cmd28Diagrama}
+        options={{
+          title: 'Partida de bombas intercaladas',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd29" component={Cmd29}
+        options={{
+          title: 'Partida estrela triangulo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd29Diagrama" component={Cmd29Diagrama}
+        options={{
+          title: 'Partida estrela triangulo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd30" component={Cmd30}
+        options={{
+          title: 'Partida com reversão e botão de emergencia',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd30Diagrama" component={Cmd30Diagrama}
+        options={{
+          title: 'Partida com reversão e botão de emergencia',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd31" component={Cmd31}
+        options={{
+          title: 'Partida Reversão com memoria',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd31Diagrama" component={Cmd31Diagrama}
+        options={{
+          title: 'Partida Reversão com memoria',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
 
 
 
       </Stack.Navigator>
-
-      
-
     </NavigationContainer>
   );
 }

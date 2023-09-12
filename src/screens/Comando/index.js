@@ -121,6 +121,64 @@ function Comando({ navigation }) {
           <Text style={styles.conteudoAula}>Estrela Triangulo - Unifilar</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd21')}>
+          <Text style={styles.tituloAula} >Aula 21</Text>
+          <Text style={styles.conteudoAula}>Partida Arraque</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd22')}>
+          <Text style={styles.tituloAula} >Aula 22</Text>
+          <Text style={styles.conteudoAula}>Comando para caixa água</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd23')}>
+          <Text style={styles.tituloAula} >Aula 23</Text>
+          <Text style={styles.conteudoAula}>Comando para cancela</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd24')}>
+          <Text style={styles.tituloAula} >Aula 24</Text>
+          <Text style={styles.conteudoAula}>Partida com reversão e sinalizador</Text>
+        </TouchableOpacity>
+
+        
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd25')}>
+          <Text style={styles.tituloAula} >Aula 25</Text>
+          <Text style={styles.conteudoAula}>Partida direta sem selo</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd26')}>
+          <Text style={styles.tituloAula} >Aula 26</Text>
+          <Text style={styles.conteudoAula}>Partida Circuito em cascata</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd27')}>
+          <Text style={styles.tituloAula} >Aula 27</Text>
+          <Text style={styles.conteudoAula}>Contato de selo unifilar</Text>
+        </TouchableOpacity>
+
+        
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd28')}>
+          <Text style={styles.tituloAula} >Aula 28</Text>
+          <Text style={styles.conteudoAula}>Diagrma comando partida bombas intercaladas</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd29')}>
+          <Text style={styles.tituloAula} >Aula 29</Text>
+          <Text style={styles.conteudoAula}>Partida estrela triangulo</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd30')}>
+          <Text style={styles.tituloAula} >Aula 30</Text>
+          <Text style={styles.conteudoAula}>Partida com reversão e botão de emergência</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd31')}>
+          <Text style={styles.tituloAula} >Aula 31</Text>
+          <Text style={styles.conteudoAula}>Partida reversão com memoria</Text>
+        </TouchableOpacity>
+
+
       </View>
       </ScrollView>
     );

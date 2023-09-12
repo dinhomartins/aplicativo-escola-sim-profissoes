@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { StatusBar } from 'expo-status-bar';
 import {
   Button,
   Platform,
   SafeAreaView,
-  StatusBar,
+  
   StyleSheet,
   Text,
   View,
@@ -12,46 +13,48 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+
 const STYLES = ["default", "dark-content", "light-content"];
 const TRANSITIONS = ["fade", "slide", "none"];
 
 const HomeScreen = ({ navigation }) => {
-  const [hidden, setHidden] = useState(false);
-  const [statusBarStyle, setStatusBarStyle] = useState(STYLES[0]);
-  const [statusBarTransition, setStatusBarTransition] = useState(
-    TRANSITIONS[0]
-  );
+  // const [hidden, setHidden] = useState(false);
+  // const [statusBarStyle, setStatusBarStyle] = useState(STYLES[0]);
+  // const [statusBarTransition, setStatusBarTransition] = useState(
+  //   TRANSITIONS[0]
+  // );
 
-  const changeStatusBarVisibility = () => setHidden(!hidden);
+  // const changeStatusBarVisibility = () => setHidden(!hidden);
 
-  const changeStatusBarStyle = () => {
-    const styleId = STYLES.indexOf(statusBarStyle) + 1;
-    if (styleId === STYLES.length) {
-      setStatusBarStyle(STYLES[0]);
-    } else {
-      setStatusBarStyle(STYLES[styleId]);
-    }
-  };
+  // const changeStatusBarStyle = () => {
+  //   const styleId = STYLES.indexOf(statusBarStyle) + 1;
+  //   if (styleId === STYLES.length) {
+  //     setStatusBarStyle(STYLES[0]);
+  //   } else {
+  //     setStatusBarStyle(STYLES[styleId]);
+  //   }
+  // };
 
-  const changeStatusBarTransition = () => {
-    const transition = TRANSITIONS.indexOf(statusBarTransition) + 1;
-    if (transition === TRANSITIONS.length) {
-      setStatusBarTransition(TRANSITIONS[0]);
-    } else {
-      setStatusBarTransition(TRANSITIONS[transition]);
-    }
-  };
+  // const changeStatusBarTransition = () => {
+  //   const transition = TRANSITIONS.indexOf(statusBarTransition) + 1;
+  //   if (transition === TRANSITIONS.length) {
+  //     setStatusBarTransition(TRANSITIONS[0]);
+  //   } else {
+  //     setStatusBarTransition(TRANSITIONS[transition]);
+  //   }
+  // };
 
   return (
   
     <SafeAreaView style={styles.container}>
-      <StatusBar
+      {/* <StatusBar
         animated={true}
         backgroundColor="#1F9EAF"
         barStyle={statusBarStyle}
         showHideTransition={statusBarTransition}
         hidden={hidden}
-      />
+      /> */}
+      <StatusBar style="light" />
  <ScrollView>
      
         <View style={styles.container}>
