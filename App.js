@@ -61,6 +61,30 @@ import Dg2 from './src/screens/Comando/Cmd09/dg2';
 import Dg3 from './src/screens/Comando/Cmd09/dg3';
 import Cmd10 from './src/screens/Comando/Cmd10';
 
+import Cmd11 from './src/screens/Comando/Cmd11';
+import Cmd12 from './src/screens/Comando/Cmd12';
+import Cmd12PartidaDireta from './src/screens/Comando/Cmd12//Cmd12PartidaDireta';
+
+import Cmd13 from './src/screens/Comando/Cmd13';
+import Cmd13ContatoDeSelo from './src/screens/Comando/Cmd13/contatoDeSelo';
+import Cmd14 from './src/screens/Comando/Cmd14';
+import cmd14Diagrama from './src/screens/Comando/Cmd14/cmd14Diagrama';
+import Cmd15 from './src/screens/Comando/Cmd15';
+import Cmd15Diagrama from './src/screens/Comando/Cmd15/cmd15Diagrama';
+import Cmd16 from './src/screens/Comando/Cmd16';
+import Cmd16Diagrama from './src/screens/Comando/Cmd16/cmd16Diagrama';
+import Cmd17 from './src/screens/Comando/Cmd17';
+import Cmd17Diagrama from './src/screens/Comando/Cmd17/cmd17Diagrama';
+import Cmd18 from './src/screens/Comando/Cmd18';
+import Cmd18Diagrama from './src/screens/Comando/Cmd18/cmd18Diagrama';
+import Cmd19 from './src/screens/Comando/Cmd19';
+import Cmd19Diagrama from './src/screens/Comando/Cmd19/cmd19Diagrama';
+import Cmd20 from './src/screens/Comando/Cmd20';
+import Cmd20Diagrama from './src/screens/Comando/Cmd20/cmd20Diagrama';
+
+
+
+
 const Stack = createNativeStackNavigator();
 
 
@@ -642,6 +666,218 @@ export default function App() {
           // Tirar header
           // headerShown: false
         }}  /> 
+
+<Stack.Screen name="Cmd11" component={Cmd11}
+        options={{
+          title: 'Réle Térmico',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd12" component={Cmd12}
+        options={{
+          title: 'Partida direta',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+        
+        
+<Stack.Screen name="Cmd12PartidaDireta" component={Cmd12PartidaDireta}
+        options={{
+          title: 'Partida direta',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd13" component={Cmd13}
+        options={{
+          title: 'Contato de Selo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd13ContatoDeSelo" component={Cmd13ContatoDeSelo}
+        options={{
+          title: 'Contato de Selo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd14" component={Cmd14}
+        options={{
+          title: 'Partida contato de selo com rele termico',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="cmd14Diagrama" component={cmd14Diagrama}
+        options={{
+          title: 'Partida contato de selo com rele termico',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd15" component={Cmd15}
+        options={{
+          title: 'Partida com auxiliar de sobrecarga',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd15Diagrama" component={Cmd15Diagrama}
+        options={{
+          title: 'Partida com auxiliar de sobrecarga',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd16" component={Cmd16}
+        options={{
+          title: 'Partida automatica e manual com boia',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd16Diagrama" component={Cmd16Diagrama}
+        options={{
+          title: 'Partida automatica e manual com boia',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd17" component={Cmd17}
+        options={{
+          title: 'Estrela Triangulo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd17Diagrama" component={Cmd17Diagrama}
+        options={{
+          title: 'Estrela Triangulo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd18" component={Cmd18}
+        options={{
+          title: 'Partida Estrela Triangulo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd18Diagrama" component={Cmd18Diagrama}
+        options={{
+          title: 'Partida Estrela Triangulo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd19" component={Cmd19}
+        options={{
+          title: 'Diagrama de potência',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd19Diagrama" component={Cmd19Diagrama}
+        options={{
+          title: 'Diagrama de potência',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd20" component={Cmd20}
+        options={{
+          title: 'Estrela Triangulo',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Cmd20Diagrama" component={Cmd20Diagrama}
+        options={{
+          title: 'Diagrama de Estrela triangulo unifilar',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+
 
 
       </Stack.Navigator>

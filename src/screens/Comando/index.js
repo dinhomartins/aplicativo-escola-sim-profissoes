@@ -71,6 +71,55 @@ function Comando({ navigation }) {
           <Text style={styles.conteudoAula}>Motor 6 pontas </Text>
         </TouchableOpacity>
 
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd11')}>
+          <Text style={styles.tituloAula} >Aula 11</Text>
+          <Text style={styles.conteudoAula}>Réle Térmico </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd12')}>
+          <Text style={styles.tituloAula} >Aula 12</Text>
+          <Text style={styles.conteudoAula}>Partida Direta</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd13')}>
+          <Text style={styles.tituloAula} >Aula 13</Text>
+          <Text style={styles.conteudoAula}>Contato de Selo</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd14')}>
+          <Text style={styles.tituloAula} >Aula 14</Text>
+          <Text style={styles.conteudoAula}>Partida contato de selo com rele térmico</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd15')}>
+          <Text style={styles.tituloAula} >Aula 15</Text>
+          <Text style={styles.conteudoAula}>Partida com motor auxiliar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd16')}>
+          <Text style={styles.tituloAula} >Aula 16</Text>
+          <Text style={styles.conteudoAula}>Partida automatica e manual com boia</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd17')}>
+          <Text style={styles.tituloAula} >Aula 17</Text>
+          <Text style={styles.conteudoAula}>Estrela Triangulo</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd18')}>
+          <Text style={styles.tituloAula} >Aula 18</Text>
+          <Text style={styles.conteudoAula}>Partida Estrela Triangulo</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd19')}>
+          <Text style={styles.tituloAula} >Aula 19</Text>
+          <Text style={styles.conteudoAula}>Diagrama de potência</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd20')}>
+          <Text style={styles.tituloAula} >Aula 20</Text>
+          <Text style={styles.conteudoAula}>Estrela Triangulo - Unifilar</Text>
+        </TouchableOpacity>
 
       </View>
       </ScrollView>
