@@ -96,16 +96,17 @@ const styles = StyleSheet.create({
   },
 
   titulo:{
-    fontSize: 20,
+    fontSize: 32,
     fontWeight: 'bold',
     color:'#51AC42'
   },
   subTitulo:{
-    fontSize: 18,
-    marginTop: 20
+    fontSize: 24,
+    marginTop: 20,
+    fontWeight: 'bold'
   },
   texto:{
-    fontSize: 14,
+    fontSize: 18,
     marginTop: 20
   },
   imagem:{

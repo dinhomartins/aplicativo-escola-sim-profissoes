@@ -6,10 +6,7 @@ function Aula02({ navigation }) {
    <ScrollView style={styles.scrollView} >
     <View style={styles.container} >
 
-    <Text style={styles.subTitulo} >Tensão elétrica</Text>
-    <Text style={styles.texto} >O eletricista é o profissional responsável pela reparação e manutenção das instalações elétricas, seja em residências, seja em indústrias. Portanto, é uma profissão que exige bastante conhecimento técnico para saber o que projeta e para trabalhar com qualidade e segurança. Além do conhecimento, algumas ferramentas para eletricista também são necessárias.
-    {'\n'}{'\n'}   
-O trabalho com eletricidade acaba envolvendo várias atividades, sendo que muitas são complexas. Por isso, é fundamental contar com os equipamentos adequados para desenvolver as tarefas de forma correta e segura. Os benefícios de se trabalhar com esses itens são muitos: o eletricista evita riscos, executa o serviço de forma mais rápida, ganha muita qualidade, entre outros.</Text>
+    <Text style={styles.titulo} >Ferramentas</Text>
 
 <Text style={styles.titulo} >1 - Kit chaves</Text>
     <Image

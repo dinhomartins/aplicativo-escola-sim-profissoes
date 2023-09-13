@@ -7,6 +7,10 @@ function Cmd02({ navigation }) {
       <View style={styles.container}>
         <Text style={styles.titulo}>Motor elétrico</Text>
         {/* <Text style={styles.subTitulo}>Tensão elétrica</Text> */}
+        <Image
+        style={{width: null, height: 240, marginTop: 20}}
+        source={require("../../../../assets/motoreletrico2.jpg")}
+      />
         <Text style={styles.texto}>
           Em máquinas elétricas, motor elétrico ou atuador elétrico[1] é
           qualquer dispositivo que transforma energia elétrica em mecânica. É o
@@ -89,6 +93,9 @@ function Cmd02({ navigation }) {
       <Text style={styles.subTitulo}>
       Animação do processo.
       </Text>
+
+  
+
     </ScrollView>
   );
 }
@@ -102,7 +109,7 @@ const styles = StyleSheet.create({
   },
 
   titulo: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
     color: "#51AC42",
   },

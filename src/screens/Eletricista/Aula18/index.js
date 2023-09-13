@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Image,TouchableOpacity } from 'react-native';
 
 
 function Aula18({ navigation }) {
@@ -8,6 +8,11 @@ function Aula18({ navigation }) {
     <View style={styles.container} >
     <Text style={styles.titulo} >CIRCUITO DE ILUMINAÇÃO
 LIGAÇÃO INTERRUPTOR SIMPLES</Text>
+
+<TouchableOpacity
+                  style={styles.iconeCirculo}
+                  onPress={() => navigation.navigate("Aula18Diagrama")}
+                >
     
 <Image
         style={{height:190, width: '90%', marginTop:20, marginBottom:20}}
@@ -30,7 +35,7 @@ LIGAÇÃO INTERRUPTOR SIMPLES</Text>
         source={require('../../../../assets/il03.jpg')}  
     />
 
-
+</TouchableOpacity>
 
        
 </View>
@@ -48,7 +53,7 @@ const styles = StyleSheet.create({
   },
 
   titulo:{
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
     color:'#51AC42'
   },

@@ -5,9 +5,13 @@ import { View, Text, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-n
 
 function Aula14({ navigation }) {
  const images = [
-   {
+  {
     url:
-      'https://i.ibb.co/pP56TJ3/qdc005.jpg',
+      '',
+      props:{
+          source: require('../../../../assets/qdc005.jpg')
+      },
+  
   },
 
 ];

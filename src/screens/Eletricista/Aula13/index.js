@@ -7,8 +7,12 @@ function Aula13({ navigation }) {
 const images = [
   {
     url:
-      'https://i.ibb.co/gSSLzLK/qdc004.jpg',
-   },
+      '',
+      props:{
+          source: require('../../../../assets/qdc004.jpg')
+      },
+  
+  },
 
  ];
  return (

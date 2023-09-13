@@ -64,18 +64,19 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 
-  titulo: {
+  titulo:{
+    fontSize: 32,
+    fontWeight: 'bold',
+    color:'#51AC42'
+  },
+  subTitulo:{
     fontSize: 20,
-    fontWeight: "bold",
-    color: "#51AC42",
+    marginTop: 20,
+    fontWeight: 'bold'
   },
-  subTitulo: {
+  texto:{
     fontSize: 18,
-    marginTop: 20,
-  },
-  texto: {
-    fontSize: 14,
-    marginTop: 20,
+    marginTop: 20
   },
   imagem: {
     width: "100%",

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StatusBar } from "expo-status-bar";
 import { Button, View, Text, StyleSheet, ScrollView, Image, ImageBackground, TouchableOpacity } from 'react-native';
 const bg = {uri: 'https://i0.wp.com/s3.sa-east-1.amazonaws.com/static.inbep.com.br/wp-content/uploads/2022/10/17154128/image-2-e1666032133196.png?resize=600%2C370&ssl=1'};
 
@@ -9,12 +10,13 @@ function Comando({ navigation }) {
     return (
       <ScrollView>
       <View style={styles.container}>
+      <StatusBar style="light" />
         <View  style={styles.capaScreen}>
 
         <ImageBackground source={bgcomando} resizeMode="cover" style={styles.capa}>
         </ImageBackground>
         </View>
-        <Text style={styles.titulo} >Comando Eletrico</Text>
+        <Text style={styles.titulo} >Comando Elétrico</Text>
         {/* <Button
           title="Go to Details... again"
           onPress={() => navigation.navigate('Home')}
@@ -32,7 +34,7 @@ function Comando({ navigation }) {
 
         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd03')}>
           <Text style={styles.tituloAula} >Aula 03</Text>
-          <Text style={styles.conteudoAula}>BOTOEIRAS</Text>
+          <Text style={styles.conteudoAula}>Botoeira</Text>
         </TouchableOpacity>
        
 
@@ -209,7 +211,7 @@ function Comando({ navigation }) {
       borderRadius: 8,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#1F9EAF',
+      backgroundColor: '#487a86',
       marginBottom: 20
     },
     tituloAula:{

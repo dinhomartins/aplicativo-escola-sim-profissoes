@@ -5,10 +5,14 @@ import ImageViewer from 'react-native-image-zoom-viewer';
 
 function  Aula15({ navigation }) {
  const images = [
-    {
-     url:
-       'https://i.ibb.co/SV5mwp0/qdc006.jpg',
-   },
+  {
+    url:
+      '',
+      props:{
+          source: require('../../../../assets/qdc006.jpg')
+      },
+  
+  },
 
 ];
  return (

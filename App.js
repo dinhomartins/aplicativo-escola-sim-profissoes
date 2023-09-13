@@ -30,6 +30,8 @@ import EletricistaAula15 from './src/screens/Eletricista/Aula15';
 import EletricistaAula16 from './src/screens/Eletricista/Aula16';
 import EletricistaAula17 from './src/screens/Eletricista/Aula17';
 import EletricistaAula18 from './src/screens/Eletricista/Aula18';
+import Aula18Diagrama from './src/screens/Eletricista/Aula18/aula18Diagrama';
+
 import EletricistaAula19 from './src/screens/Eletricista/Aula19';
 import EletricistaAula20 from './src/screens/Eletricista/Aula20';
 import EletricistaAula21 from './src/screens/Eletricista/Aula21';
@@ -41,6 +43,13 @@ import EletricistaAula26 from './src/screens/Eletricista/Aula26';
 import EletricistaAula27 from './src/screens/Eletricista/Aula27';
 import EletricistaAula28 from './src/screens/Eletricista/Aula28';
 import EletricistaAula29 from './src/screens/Eletricista/Aula29';
+import EletricistaAula30 from './src/screens/Eletricista/Aula30';
+import Aula30Diagrama from './src/screens/Eletricista/Aula30/Aula30Diagrama';
+import EletricistaAula31 from './src/screens/Eletricista/Aula31';
+import Aula31Diagrama from './src/screens/Eletricista/Aula31/Aula31Diagrama';
+import Aula31Diagrama2 from './src/screens/Eletricista/Aula31/Aula31Diagrama2';
+import EletricistaAula32 from './src/screens/Eletricista/Aula32';
+import Aula32Diagrama from './src/screens/Eletricista/Aula32/Aula32Diagrama';
 
 import ComandoAula01     from './src/screens/Detalhes/CmdAula01';
 import Cmd01 from './src/screens/Comando/Cmd01';
@@ -103,6 +112,7 @@ import Cmd30 from './src/screens/Comando/Cmd30'
 import Cmd30Diagrama from './src/screens/Comando/Cmd30/cmd30Diagrama';
 import Cmd31 from './src/screens/Comando/Cmd31'
 import Cmd31Diagrama from './src/screens/Comando/Cmd31/cmd31Diagrama';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -387,6 +397,16 @@ export default function App() {
           // Tirar header
           // headerShown: false
         }}  />
+        <Stack.Screen name="Aula18Diagrama" component={Aula18Diagrama}
+        options={{
+          title: 'Interruptor Simples ',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  />
 
 <Stack.Screen name="Aula19" component={EletricistaAula19}
         options={{
@@ -511,9 +531,88 @@ export default function App() {
           // headerShown: false
         }}  />  
 
+<Stack.Screen name="Aula30" component={EletricistaAula30}
+        options={{
+          title: 'Queda de tensão tabela',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Aula30Diagrama" component={Aula30Diagrama}
+        options={{
+          title: 'Queda de tensão tabela',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Aula31" component={EletricistaAula31}
+        options={{
+          title: 'Tabela metodos de instalação',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Aula31Diagrama" component={Aula31Diagrama}
+        options={{
+          title: 'Tabela metodos de instalação',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Aula31Diagrama2" component={Aula31Diagrama2}
+        options={{
+          title: 'Tabela metodos de instalação',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Aula32" component={EletricistaAula32}
+        options={{
+          title: 'Simbologia Instalações eletricas',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+<Stack.Screen name="Aula32Diagrama" component={Aula32Diagrama}
+        options={{
+          title: 'Simbologia Instalações eletricas',
+          headerStyle:{
+            backgroundColor: '#1F9EAF'
+          },
+          headerTintColor: '#fff',
+          // Tirar header
+          // headerShown: false
+        }}  /> 
+
+        
+
 <Stack.Screen name="Cmd01" component={Cmd01}
         options={{
-          title: 'Tabela Seção dos cabos',
+          title: 'Comando Eletrico',
           headerStyle:{
             backgroundColor: '#1F9EAF'
           },
@@ -535,9 +634,9 @@ export default function App() {
 
 <Stack.Screen name="Comando" component={Comando}
         options={{
-          title: 'Tabela Seção dos cabos',
+          title: 'Comando Elétrico',
           headerStyle:{
-            backgroundColor: '#1F9EAF'
+            backgroundColor: '#487a86'
           },
           headerTintColor: '#fff',
           // Tirar header

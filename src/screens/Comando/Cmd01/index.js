@@ -6,7 +6,6 @@ function Cmd01({ navigation }) {
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
         <Text style={styles.titulo}>Conceitos Comandos Elétricos</Text>
-        <Text style={styles.subTitulo}>Tensão elétrica</Text>
         <Text style={styles.texto}>
           Em eletricidade, comandos elétricos ou acionamentos elétricos é uma
           disciplina que lida com projetos de circuitos elétricos para o
@@ -69,7 +68,7 @@ const styles = StyleSheet.create({
   },
 
   titulo: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
     color: "#51AC42",
   },
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   texto: {
-    fontSize: 14,
+    fontSize: 18,
     marginTop: 20,
   },
   imagem: {

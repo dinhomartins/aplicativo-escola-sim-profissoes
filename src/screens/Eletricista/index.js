@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Button, View, Text, StyleSheet, ScrollView, Image, ImageBackground, TouchableOpacity } from 'react-native';
-const bg = {uri: 'https://i0.wp.com/s3.sa-east-1.amazonaws.com/static.inbep.com.br/wp-content/uploads/2022/10/17154128/image-2-e1666032133196.png?resize=600%2C370&ssl=1'};
+// const bg = {uri: 'https://i0.wp.com/s3.sa-east-1.amazonaws.com/static.inbep.com.br/wp-content/uploads/2022/10/17154128/image-2-e1666032133196.png?resize=600%2C370&ssl=1'};
 
+import bgeletricista from '../../../assets/bgeletricista.png'
 
 function Eletricista({ navigation }) {
     return (
@@ -9,10 +10,10 @@ function Eletricista({ navigation }) {
       <View style={styles.container}>
         <View  style={styles.capaScreen}>
 
-        <ImageBackground source={bg} resizeMode="cover" style={styles.capa}>
+        <ImageBackground source={bgeletricista} resizeMode="cover" style={styles.capa}>
         </ImageBackground>
         </View>
-        <Text style={styles.titulo} >Eletricista residencial e predial</Text>
+        <Text style={styles.titulo} >Eletricista residencial</Text>
         {/* <Button
           title="Go to Details... again"
           onPress={() => navigation.navigate('Home')}
@@ -26,13 +27,14 @@ function Eletricista({ navigation }) {
         {/* Aula 02 */}
         <TouchableOpacity style={styles.boxAula } onPress={() => navigation.navigate('Aula02')} >
           <Text style={styles.tituloAula} >Aula 02</Text>
-          <Text style={styles.conteudoAula}>Ferramentas para eletricista essenciais para a execução do trabalho</Text>
+          <Text style={styles.conteudoAula}>Ferramentas essenciais para o eletricista</Text>
         </TouchableOpacity>
 
         {/* Aula 03 */}
         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula03')} >
           <Text style={styles.tituloAula} >Aula 03</Text>
-          <Text style={styles.conteudoAula}>Alicate amperimetro</Text>
+          <Text style={styles.conteudoAula}>Alicate amperimetro e 
+multímetro</Text>
         </TouchableOpacity>
 
 
@@ -174,6 +176,22 @@ function Eletricista({ navigation }) {
         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula29')}>
           <Text style={styles.tituloAula} >Aula 29</Text>
           <Text style={styles.conteudoAula}>Ligando Chuveiro Eletrica</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula30')}>
+          <Text style={styles.tituloAula} >Aula 30</Text>
+          <Text style={styles.conteudoAula}>Quada de tensão</Text>
+        </TouchableOpacity>
+
+        
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula31')}>
+          <Text style={styles.tituloAula} >Aula 31</Text>
+          <Text style={styles.conteudoAula}>Tabela Metodos de instalação</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula32')}>
+          <Text style={styles.tituloAula} >Aula 32</Text>
+          <Text style={styles.conteudoAula}>Simbologia instalações eletricas</Text>
         </TouchableOpacity>
 
 

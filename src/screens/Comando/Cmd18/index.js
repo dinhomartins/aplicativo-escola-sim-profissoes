@@ -25,7 +25,7 @@ function Cmd18({ navigation }) {
             source={require("../../../../assets/52.webp")}
           />
 
-<Image
+          <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/55.webp")}
           />

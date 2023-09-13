@@ -7,10 +7,7 @@ function Aula23({ navigation }) {
    <ScrollView style={styles.scrollView} >
     <View style={styles.container} >
     <Text style={styles.titulo} >CIRCUITO INTERRUPTOR COM TOMADA </Text>
-    
-    <Text style={styles.texto} >
-    INTERRUPTOR DUAS SEÇÕES
-    </Text>
+     
 
     <Image
         style={{height:350, width: '100%', marginTop:20, marginBottom:20}}

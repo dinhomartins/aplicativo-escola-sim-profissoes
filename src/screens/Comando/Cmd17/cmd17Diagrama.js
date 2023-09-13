@@ -1,76 +1,74 @@
-import React from 'react';
-import { View, Text, ScrollView, StyleSheet, Image, SafeAreaView } from 'react-native';
- import ImageViewer from 'react-native-image-zoom-viewer';
-
+import React from "react";
+import {
+  View,
+  Text,
+  ScrollView,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+} from "react-native";
+import ImageViewer from "react-native-image-zoom-viewer";
 
 function Cmd17Diagrama({ navigation }) {
   const images = [
     {
-      url:
-        '',
-        props:{
-            source: require('../../../../assets/triangulo.jpg')
-        },
-    
-    }, 
-      
-    {
-        url:
-          '',
-          props:{
-              source: require('../../../../assets/estrela.jpg')
-          },
-      
-      }, 
-    
+      url: "",
+      props: {
+        source: require("../../../../assets/triangulo.jpg"),
+      },
+    },
 
+    {
+      url: "",
+      props: {
+        source: require("../../../../assets/estrela.jpg"),
+      },
+    },
   ];
- return (
-  <SafeAreaView style={{flex: 1}}>
-  <View style={styles.container}>
-    <ImageViewer
-      imageUrls={images}
-    />
-  </View>
-</SafeAreaView>
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <ImageViewer imageUrls={images} />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-    backgroundColor: '#F5FCFF'
+    backgroundColor: "#F5FCFF",
   },
-  tituloTopo:{
-    color: '#fff',
-    fontSize: 20
+  tituloTopo: {
+    color: "#fff",
+    fontSize: 20,
   },
-  topo:{
-    backgroundColor: '#000',
-    paddingTop: 20
+  topo: {
+    backgroundColor: "#000",
+    paddingTop: 20,
   },
-  scrollView:{
-    padding:10
+  scrollView: {
+    padding: 10,
   },
 
-  titulo:{
+  titulo: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color:'#51AC42'
+    fontWeight: "bold",
+    color: "#51AC42",
   },
-  subTitulo:{
+  subTitulo: {
     fontSize: 18,
-    marginTop: 20
+    marginTop: 20,
   },
-  texto:{
+  texto: {
     fontSize: 14,
-    marginTop: 20
+    marginTop: 20,
   },
-  imagem:{
-    width: '100%',
+  imagem: {
+    width: "100%",
     height: 250,
-    marginTop: 20
-  }
-})
+    marginTop: 20,
+  },
+});
 
 export default Cmd17Diagrama;

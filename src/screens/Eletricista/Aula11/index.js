@@ -6,9 +6,14 @@ import print from './../../../../assets/dps.jpg'
 
 function Aula11({ navigation }) {
   const images = [
+
     {
       url:
-        'https://i.ibb.co/gVGfWmH/qdc002.jpg',
+        '',
+        props:{
+            source: require('../../../../assets/qdc002.jpg')
+        },
+    
     },
 
   ];

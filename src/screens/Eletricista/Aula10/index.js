@@ -8,7 +8,11 @@ function Aula10({ navigation }) {
   const images = [
     {
       url:
-        'https://i.ibb.co/YWtbx3c/qdc001.jpg',
+        '',
+        props:{
+            source: require('../../../../assets/qdc001.jpg')
+        },
+    
     },
 
   ];

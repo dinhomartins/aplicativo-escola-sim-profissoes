@@ -101,17 +101,33 @@ function Cmd17({ navigation }) {
           />
         </TouchableOpacity>
 
-        <Text style={styles.subTitulo}>Precauções na Instalação Estrela Triangulo</Text>
+        <Text style={styles.subTitulo}>
+          Precauções na Instalação Estrela Triangulo
+        </Text>
 
-<Text>
-Um dos pontos mais importantes para que devem ter total atenção do profissional no momento da instalação da partida do motor em estrela triangulo está na questão de quando o modo triangulo deve entrar em ação.
-{"\n"}{"\n"}
-Pois bem, a ligação em triangulo só deve ser comutada após o motor estar com no mínimo noventa por centro da sua rotação nominal, sendo assim a comutação da chave estrela triangulo deverá ser executada tendo esse parâmetro como referência. Para que seja estabelecido o tempo em que o motor atinge essa velocidade, é interessante que seja usado um tacômetro na primeira vez que for realizar o teste do sistema já com carga instalada.
-{"\n"}{"\n"}
-Caso o motor tenha a mudança na configuração do fechamento antes da hora, irá ocorrer um pico de corrente praticamente idêntico a uma partida direta, dessa forma é valido conferir se o motor aplicado no sistema consegue atingir esse nível de rotação com carga aplicada, caso contrário é mais conveniente o uso de inversor de frequência, por exemplo.
-</Text>
-
-
+        <Text>
+          Um dos pontos mais importantes para que devem ter total atenção do
+          profissional no momento da instalação da partida do motor em estrela
+          triangulo está na questão de quando o modo triangulo deve entrar em
+          ação.
+          {"\n"}
+          {"\n"}
+          Pois bem, a ligação em triangulo só deve ser comutada após o motor
+          estar com no mínimo noventa por centro da sua rotação nominal, sendo
+          assim a comutação da chave estrela triangulo deverá ser executada
+          tendo esse parâmetro como referência. Para que seja estabelecido o
+          tempo em que o motor atinge essa velocidade, é interessante que seja
+          usado um tacômetro na primeira vez que for realizar o teste do sistema
+          já com carga instalada.
+          {"\n"}
+          {"\n"}
+          Caso o motor tenha a mudança na configuração do fechamento antes da
+          hora, irá ocorrer um pico de corrente praticamente idêntico a uma
+          partida direta, dessa forma é valido conferir se o motor aplicado no
+          sistema consegue atingir esse nível de rotação com carga aplicada,
+          caso contrário é mais conveniente o uso de inversor de frequência, por
+          exemplo.
+        </Text>
       </View>
     </ScrollView>
   );

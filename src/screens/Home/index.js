@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from "expo-status-bar";
 import {
   Button,
   Platform,
   SafeAreaView,
-  
   StyleSheet,
   Text,
   View,
@@ -12,7 +11,6 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-
 
 const STYLES = ["default", "dark-content", "light-content"];
 const TRANSITIONS = ["fade", "slide", "none"];
@@ -45,188 +43,183 @@ const HomeScreen = ({ navigation }) => {
   // };
 
   return (
-  
-    <SafeAreaView style={styles.container}>
-      {/* <StatusBar
-        animated={true}
-        backgroundColor="#1F9EAF"
-        barStyle={statusBarStyle}
-        showHideTransition={statusBarTransition}
-        hidden={hidden}
-      /> */}
+    // <SafeAreaView style={styles.container}>
+    //   {/* <StatusBar
+    //     animated={true}
+    //     backgroundColor="#1F9EAF"
+    //     barStyle={statusBarStyle}
+    //     showHideTransition={statusBarTransition}
+    //     hidden={hidden}
+    //   /> */}
+
+    <ScrollView>
+      <View style={styles.container}>
       <StatusBar style="light" />
- <ScrollView>
-     
-        <View style={styles.container}>
-          <View style={styles.containerTopoContent}>
-            <View style={styles.containerTopo}>
-              <Text style={styles.textoColor}>
-                Cursos {"\n"}Profissionalizantes
-              </Text>
-            </View>
-            <Text style={styles.tituloHome}>Calculos Eletricos</Text>
+        <View style={styles.containerTopoContent}>
+          <View style={styles.containerTopo}>
+            <Text style={styles.textoColor}>
+            Curso {"\n"}ElétricoPro
+  
+            </Text>
           </View>
-          <View style={styles.areaDeAtuacao}>
-            <View style={styles.containerCirculo}>
-              <View style={styles.circulo}>
-                <TouchableOpacity
-                  style={styles.iconeCirculo}
-                  onPress={() => navigation.navigate("CalculadoraCorrente")}
-                >
-                  <View>
-                    <Image
-                      style={styles.iconeCirculo}
-                      source={require("../../../assets/eletric.png")}
-                    />
-                  </View>
-                </TouchableOpacity>
-                
-              </View>
-              <Text style={styles.textoCirculo}>Watts para Corrente</Text>
+          <Text style={styles.tituloHome}>Calculos Eletricos</Text>
+        </View>
+        <View style={styles.areaDeAtuacao}>
+          <View style={styles.containerCirculo}>
+            <View style={styles.circulo}>
+              <TouchableOpacity
+                style={styles.iconeCirculo}
+                onPress={() => navigation.navigate("CalculadoraCorrente")}
+              >
+                <View>
+                  <Image
+                    style={styles.iconeCirculo}
+                    source={require("../../../assets/eletric.png")}
+                  />
+                </View>
+              </TouchableOpacity>
             </View>
-
-            <View style={styles.containerCirculo}>
-              <View style={styles.circulo}>
-                <TouchableOpacity
-                  style={styles.iconeCirculo}
-                  onPress={() => navigation.navigate("CalculadoraPotencia")}
-                >
-                  <View>
-                    <Image
-                      style={styles.iconeCirculo}
-                      source={require("../../../assets/comando.png")}
-                    />
-                  </View>
-                </TouchableOpacity>
-                
-              </View>
-              <Text style={styles.textoCirculo}> Corrente para Watts </Text>
-            </View>
-
-            <View style={styles.containerCirculo}>
-              <View style={styles.circulo}>
-                <TouchableOpacity
-                  style={styles.iconeCirculo}
-                  onPress={() => navigation.navigate("CalculadoraBitolaCabo")}
-                >
-                  <View>
-                    <Image
-                      style={styles.iconeCirculo}
-                      source={require("../../../assets/bitolacalc.png")}
-                    />
-                  </View>
-                </TouchableOpacity>
-                
-              </View>
-              <Text style={styles.textoCirculo}>Calcular seção cabo</Text>
-            </View>
-
-
-
-
-            <View style={styles.containerCirculo}>
-              <View style={styles.circulo}>
-                <TouchableOpacity
-                  style={styles.iconeCirculo}
-                  onPress={() => navigation.navigate("CalculadoraDisjuntor")}
-                >
-                  <View>
-                    <Image
-                      style={styles.iconeCirculo}
-                      source={require("../../../assets/calcdisjuntor.png")}
-                    />
-                  </View>
-                </TouchableOpacity>
-                
-              </View>
-              <Text style={styles.textoCirculo}>Calcular Disjuntor</Text>
-            </View>
+            <Text style={styles.textoCirculo}>Watts para Corrente</Text>
           </View>
 
-          <View style={styles.faixaCursosDisponiveis}>
-            <Text style={styles.tituloHome}>Cursos Disponiveis</Text>
+          <View style={styles.containerCirculo}>
+            <View style={styles.circulo}>
+              <TouchableOpacity
+                style={styles.iconeCirculo}
+                onPress={() => navigation.navigate("CalculadoraPotencia")}
+              >
+                <View>
+                  <Image
+                    style={styles.iconeCirculo}
+                    source={require("../../../assets/comando.png")}
+                  />
+                </View>
+              </TouchableOpacity>
+            </View>
+            <Text style={styles.textoCirculo}> Corrente para Watts </Text>
           </View>
 
-          <TouchableOpacity
-            style={[styles.boxMenu, styles.shadowProp]}
-            onPress={() => navigation.navigate("Eletricista")}
-          >
-            <View style={styles.contentBoxMenuLeft}>
-              <Image
-                style={styles.icone}
-                source={require("../../../assets/eletricista.png")}
-              />
+          <View style={styles.containerCirculo}>
+            <View style={styles.circulo}>
+              <TouchableOpacity
+                style={styles.iconeCirculo}
+                onPress={() => navigation.navigate("CalculadoraBitolaCabo")}
+              >
+                <View>
+                  <Image
+                    style={styles.iconeCirculo}
+                    source={require("../../../assets/fiacao.png")}
+                  />
+                </View>
+              </TouchableOpacity>
             </View>
-
-            <View style={styles.contentBoxMenu}>
-              <Text style={styles.textoBoxMenu}>Eletricista Residencial</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.boxMenu, styles.shadowProp]}
-            onPress={() => navigation.navigate("Comando")}
-          >
-            <View style={styles.contentBoxMenuLeft}>
-              <Image
-                style={styles.icone}
-                source={require("../../../assets/comandoeletrico.png")}
-              />
-            </View>
-
-            <View style={styles.contentBoxMenu}>
-              <Text style={styles.textoBoxMenu}>Comando Eletrio</Text>
-            </View>
-          </TouchableOpacity>
-
-          <View style={styles.boxMenu}>
-            <View style={styles.contentBoxMenuLeft}>
-              <Image
-                style={styles.icone}
-                source={require("../../../assets/air.png")}
-              />
-            </View>
-
-            <View style={styles.contentBoxMenu}>
-              <Text style={styles.textoBoxMenu}>
-               Comando {"\n"}manutenção de {"\n"}ar condicionado split
-              </Text>
-            </View>
+            <Text style={styles.textoCirculo}>Calcular seção cabo</Text>
           </View>
 
-          <View style={styles.boxMenu}>
-            <View style={styles.contentBoxMenuLeft}>
-              <Image
-                style={styles.icone}
-                source={require("../../../assets/freezer.png")}
-              />
+          <View style={styles.containerCirculo}>
+            <View style={styles.circulo}>
+              <TouchableOpacity
+                style={styles.iconeCirculo}
+                onPress={() => navigation.navigate("CalculadoraDisjuntor")}
+              >
+                <View>
+                  <Image
+                    style={styles.iconeCirculo}
+                    source={require("../../../assets/calcdisjuntor.png")}
+                  />
+                </View>
+              </TouchableOpacity>
             </View>
-
-            <View style={styles.contentBoxMenu}>
-              <Text style={styles.textoBoxMenu}>
-                Manutenção de {"\n"}Geladeira
-              </Text>
-            </View>
-          </View>
-
-          <View style={styles.boxMenu}>
-            <View style={styles.contentBoxMenuLeft}>
-              <Image
-                style={styles.icone}
-                source={require("../../../assets/lavar.png")}
-              />
-            </View>
-
-            <View style={styles.contentBoxMenu}>
-              <Text style={styles.textoBoxMenu}>
-                Manutenção de {"\n"}Maquina de lavar
-              </Text>
-            </View>
+            <Text style={styles.textoCirculo}>Calcular Disjuntor</Text>
           </View>
         </View>
-        </ScrollView>
-    </SafeAreaView>
-    
+
+        <View style={styles.faixaCursosDisponiveis}>
+          <Text style={styles.tituloHome}>Cursos Disponiveis</Text>
+        </View>
+
+        <TouchableOpacity
+          style={[styles.boxMenu, styles.shadowProp]}
+          onPress={() => navigation.navigate("Eletricista")}
+        >
+          <View style={styles.contentBoxMenuLeft}>
+            <Image
+              style={styles.icone}
+              source={require("../../../assets/eletricista.png")}
+            />
+          </View>
+
+          <View style={styles.contentBoxMenu}>
+            <Text style={styles.textoBoxMenu}>Eletricista Residencial</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.boxMenu, styles.shadowProp]}
+          onPress={() => navigation.navigate("Comando")}
+        >
+          <View style={styles.contentBoxMenuLeft}>
+            <Image
+              style={styles.icone}
+              source={require("../../../assets/comandoeletricocapa.png")}
+            />
+          </View>
+
+          <View style={styles.contentBoxMenu}>
+            <Text style={styles.textoBoxMenu}>Comando Eletrio</Text>
+          </View>
+        </TouchableOpacity>
+
+        <View style={styles.boxMenu}>
+          <View style={styles.contentBoxMenuLeft}>
+            <Image
+              style={styles.icone}
+              source={require("../../../assets/air.png")}
+            />
+          </View>
+
+          <View style={styles.contentBoxMenu}>
+            <Text style={styles.txtembreve}>Em breve</Text>
+            <Text style={styles.textoBoxMenu}>
+              manutenção de {"\n"}ar condicionado split
+            </Text>
+          </View>
+        </View>
+
+        <View style={styles.boxMenu}>
+          <View style={styles.contentBoxMenuLeft}>
+            <Image
+              style={styles.icone}
+              source={require("../../../assets/freezer.png")}
+            />
+          </View>
+
+          <View style={styles.contentBoxMenu}>
+          <Text style={styles.txtembreve}>Em breve</Text>
+            <Text style={styles.textoBoxMenu}>
+              Manutenção de {"\n"}Geladeira
+            </Text>
+          </View>
+        </View>
+
+        <View style={styles.boxMenu}>
+          <View style={styles.contentBoxMenuLeft}>
+            <Image
+              style={styles.icone}
+              source={require("../../../assets/lavar.png")}
+            />
+          </View>
+
+          <View style={styles.contentBoxMenu}>
+          <Text style={styles.txtembreve}>Em breve</Text>
+            <Text style={styles.textoBoxMenu}>
+              Manutenção de {"\n"}Maquina de lavar
+            </Text>
+          </View>
+        </View>
+      </View>
+    </ScrollView>
+    // </SafeAreaView>
   );
 };
 
@@ -238,19 +231,23 @@ const styles = StyleSheet.create({
     alignContent: "center",
     flexWrap: "wrap",
   },
-  scrollView:{
-    flex: 1
+  scrollView: {
+    flex: 1,
   },
   containerTopoContent: {
     flexDirection: "column",
     width: "100%",
   },
   tituloHome: {
-    fontSize: 18,
+    fontSize: 22,
     marginLeft: 10,
     marginTop: 10,
+    fontWeight: 'bold'
   },
-
+  txtembreve:{
+color: 'gray',
+fontWeight: 'bold'
+  },
   areaDeAtuacao: {
     height: 150,
     width: "100%",
@@ -271,13 +268,15 @@ const styles = StyleSheet.create({
   },
   boxMenu: {
     width: "95%",
-    height: 96,
+    height: 120,
     backgroundColor: "#f5f5f5",
     margin: 5,
     borderRadius: 8,
     flexDirection: "row",
     alignItems: "center",
     padding: 10,
+    borderWidth: 1,
+    borderColor: '#e0e0e0'
   },
   icone: {
     width: 80,
@@ -306,7 +305,7 @@ const styles = StyleSheet.create({
   circulo: {
     width: 70,
     height: 70,
-    backgroundColor: "#1F9EAF",
+    backgroundColor: "#44749d",
     margin: 5,
     borderRadius: 50,
     alignContent: "center",
@@ -320,7 +319,7 @@ const styles = StyleSheet.create({
     height: 150,
     width: "100%",
 
-    backgroundColor: "#1F9EAF",
+    backgroundColor: "#44749d",
     flexDirection: "row",
     justifyContent: "center",
     flexWrap: "wrap",
