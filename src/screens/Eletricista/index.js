@@ -65,7 +65,7 @@ multímetro</Text>
          {/* Aula 08*/}
          <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula08')}>
           <Text style={styles.tituloAula} >Aula 08</Text>
-          <Text style={styles.conteudoAula}>QDC - Quadro de distribuição</Text>
+          <Text style={styles.conteudoAula}>IDR - Interruptor diferencia residual</Text>
         </TouchableOpacity>
 
          {/* Aula 09*/}
@@ -170,12 +170,12 @@ multímetro</Text>
 
         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula28')}>
           <Text style={styles.tituloAula} >Aula 28</Text>
-          <Text style={styles.conteudoAula}>Ligando Chuveiro Eletrica</Text>
+          <Text style={styles.conteudoAula}>Descobrindo seção do cabo Ligando Chuveiro Eletrica</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula29')}>
           <Text style={styles.tituloAula} >Aula 29</Text>
-          <Text style={styles.conteudoAula}>Ligando Chuveiro Eletrica</Text>
+          <Text style={styles.conteudoAula}>Tabela com sessão de cabos</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula30')}>
