@@ -15,6 +15,7 @@ function Aula08({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/dr.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>DR (diferencial residual)</Text>
@@ -31,6 +32,7 @@ function Aula08({ navigation }) {
         <Image
           style={{ height: 350, width: "80%", marginTop: 20, marginBottom: 20 }}
           source={require("../../../../assets/idr.jpg")}
+          resizeMode="contain"
         />
       </View>
     </ScrollView>

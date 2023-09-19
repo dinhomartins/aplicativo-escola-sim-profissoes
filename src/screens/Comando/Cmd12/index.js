@@ -21,6 +21,7 @@ function Cmd12({ navigation }) {
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/partidadireta.webp")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
       </View>

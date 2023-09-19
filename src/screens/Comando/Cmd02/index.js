@@ -8,9 +8,10 @@ function Cmd02({ navigation }) {
         <Text style={styles.titulo}>Motor elétrico</Text>
         {/* <Text style={styles.subTitulo}>Tensão elétrica</Text> */}
         <Image
-        style={{width: null, height: 240, marginTop: 20}}
-        source={require("../../../../assets/motoreletrico2.jpg")}
-      />
+          style={{ width: null, height: 240, marginTop: 20 }}
+          source={require("../../../../assets/motoreletrico2.jpg")}
+          resizeMode="contain"
+        />
         <Text style={styles.texto}>
           Em máquinas elétricas, motor elétrico ou atuador elétrico[1] é
           qualquer dispositivo que transforma energia elétrica em mecânica. É o
@@ -60,6 +61,7 @@ function Cmd02({ navigation }) {
       <Image
         style={styles.motores}
         source={require("../../../../assets/m01.png")}
+        resizeMode="contain"
       />
       <Text style={styles.subTitulo}>
         Quando a bobina é alimentada, um campo magnético é gerado em torno do
@@ -70,6 +72,7 @@ function Cmd02({ navigation }) {
       <Image
         style={styles.motores}
         source={require("../../../../assets/m02.png")}
+        resizeMode="contain"
       />
 
       <Text style={styles.subTitulo}>O rotor continua a girar.</Text>
@@ -77,6 +80,7 @@ function Cmd02({ navigation }) {
       <Image
         style={styles.motores}
         source={require("../../../../assets/m03.png")}
+        resizeMode="contain"
       />
 
       <Text style={styles.subTitulo}>
@@ -88,14 +92,10 @@ function Cmd02({ navigation }) {
       <Image
         style={styles.motores}
         source={require("../../../../assets/m04.gif")}
+        resizeMode="contain"
       />
 
-      <Text style={styles.subTitulo}>
-      Animação do processo.
-      </Text>
-
-  
-
+      <Text style={styles.subTitulo}>Animação do processo.</Text>
     </ScrollView>
   );
 }

@@ -12,11 +12,12 @@ function Cmd11({ navigation }) {
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
-        <Text style={styles.tituloPrimario}>Réle Térmico</Text>
+        <Text style={styles.tituloPrimario}>Relé Térmico</Text>
 
         <Image
           style={{ width: 350, height: 250 }}
           source={require("../../../../assets/rlt02.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>O que é relé térmico</Text>
@@ -91,6 +92,7 @@ function Cmd11({ navigation }) {
         <Image
           style={{ width: 350, height: 250 }}
           source={require("../../../../assets/rlt03.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.titulo}>Contatos principais</Text>
@@ -104,24 +106,30 @@ function Cmd11({ navigation }) {
 
         <Text style={styles.titulo}>Contatos auxiliares</Text>
         <Text>
-        Os contatos auxiliares protegem o circuito de comando do motor trifásico e o circuito de lógica do motor.
+          Os contatos auxiliares protegem o circuito de comando do motor
+          trifásico e o circuito de lógica do motor.
         </Text>
 
         <Text style={styles.titulo}>Contato fechado</Text>
         <Text>
-        Os contatos abertos podem ser usados para sinalizar que o relé térmico está acionado ou que existe um problema no circuito, através de uma lâmpada por exemplo. Eles são identificados pelos números 97 e 98.
+          Os contatos abertos podem ser usados para sinalizar que o relé térmico
+          está acionado ou que existe um problema no circuito, através de uma
+          lâmpada por exemplo. Eles são identificados pelos números 97 e 98.
         </Text>
 
         <Text style={styles.titulo}>Contato tipo comutador</Text>
         <Text>
-        Os contatos do tipo comutador são usados da mesma forma que os outros contatos aberto e fechado, porém, com apenas uma entrada de alimentação.
-        {"\n"} {"\n"}
-Assim como os demais dispositivos elétricos, o relé térmico também necessita de ajuste específico de acordo com cada circuito e cada tipo de motor a ser utilizado.
-{"\n"} {"\n"}
-Existem classes de disparo, tornando possível o melhor dimensionamento dele de acordo com o tempo de partida do motor.
+          Os contatos do tipo comutador são usados da mesma forma que os outros
+          contatos aberto e fechado, porém, com apenas uma entrada de
+          alimentação.
+          {"\n"} {"\n"}
+          Assim como os demais dispositivos elétricos, o relé térmico também
+          necessita de ajuste específico de acordo com cada circuito e cada tipo
+          de motor a ser utilizado.
+          {"\n"} {"\n"}
+          Existem classes de disparo, tornando possível o melhor dimensionamento
+          dele de acordo com o tempo de partida do motor.
         </Text>
-
-
       </View>
     </ScrollView>
   );
@@ -140,7 +148,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#51AC42",
     marginTop: 20,
-    marginBottom:20
+    marginBottom: 20,
   },
 
   titulo: {
@@ -148,7 +156,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#51AC42",
     marginTop: 20,
-    marginBottom:20
+    marginBottom: 20,
   },
   subTitulo: {
     fontSize: 18,

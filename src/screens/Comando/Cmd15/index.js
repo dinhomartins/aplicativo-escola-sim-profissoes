@@ -22,6 +22,7 @@ e motor auxiliar em caso de sobrecarga</Text>
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/50diagrama.webp")}
+            resizeMode="contain"
           />
           
 

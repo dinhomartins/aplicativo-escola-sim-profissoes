@@ -33,6 +33,7 @@ function Cmd04({ navigation }) {
       <Image
         style={{ width: null, height: 350 }}
         source={require("../../../../assets/contator.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.subTitulo}>Como funciona um contator elétrico?</Text>
@@ -102,11 +103,13 @@ function Cmd04({ navigation }) {
       <Image
         style={{ width: null, height: 350 }}
         source={require("../../../../assets/contator2.jpg")}
+        resizeMode="contain"
       />
 
       <Image
         style={{ width: null, height: 350 }}
         source={require("../../../../assets/contator3.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.subTitulo}>
@@ -143,6 +146,7 @@ function Cmd04({ navigation }) {
       <Image
         style={{ width: null, height: 420 }}
         source={require("../../../../assets/contator4.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.subTitulo}>Contator elétrico de tipo AC2</Text>
@@ -160,6 +164,7 @@ function Cmd04({ navigation }) {
       <Image
         style={{ width: null, height: 380 }}
         source={require("../../../../assets/contator5.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.subTitulo}>Contator elétrico de tipo AC3</Text>
@@ -175,6 +180,7 @@ function Cmd04({ navigation }) {
       <Image
         style={{ width: null, height: 480 }}
         source={require("../../../../assets/contator6.jpg")}
+        resizeMode="contain"
       />
 
 
@@ -187,6 +193,7 @@ Já a última categoria de contatores elétricos (a AC4) é voltada para realiza
 <Image
   style={{ width: null, height: 480 }}
   source={require("../../../../assets/contator7.jpg")}
+  resizeMode="contain"
 />
 
 

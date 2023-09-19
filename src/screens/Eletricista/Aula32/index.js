@@ -33,6 +33,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl1.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -42,6 +43,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl2.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -51,6 +53,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl3.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -60,6 +63,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl4.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -69,6 +73,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl5.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -78,6 +83,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl6.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -87,6 +93,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl7.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -96,6 +103,7 @@ As tabelas a seguir mostram a simbologia do sistema unifilar para instalações 
               marginBottom: 20,
             }}
             source={require("../../../../assets/tl8.webp")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
 

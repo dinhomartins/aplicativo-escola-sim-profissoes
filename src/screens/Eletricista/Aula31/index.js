@@ -26,6 +26,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela01.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -35,6 +36,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela02.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -44,6 +46,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela03.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -53,6 +56,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela04.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -62,6 +66,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela05.webp")}
+            resizeMode="contain"
           />
           <Image
             style={{
@@ -71,6 +76,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela06.webp")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
 
@@ -104,6 +110,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela07.webp")}
+            resizeMode="contain"
           />
 
 <Image
@@ -114,6 +121,7 @@ function Aula31({ navigation }) {
               marginBottom: 20,
             }}
             source={require("../../../../assets/tabela08.webp")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
 

@@ -12,7 +12,7 @@ function Cmd06({ navigation }) {
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
-      <Text style={styles.titulo}>Sinaleiro luminoso</Text>
+        <Text style={styles.titulo}>Sinaleiro luminoso</Text>
 
         {/* <Text style={styles.subTitulo}>Tensão elétrica</Text> */}
         <Text style={styles.texto}>
@@ -24,9 +24,9 @@ function Cmd06({ navigation }) {
       <Image
         style={{ width: null, height: 200 }}
         source={require("../../../../assets/sinaleiro.jpg")}
+        resizeMode="contain"
       />
 
-      
       <Text style={styles.texto}>
         São dispositivos que compõem um circuito elétrico e são usados para
         indicar ao operador as condições atuais de uma máquina ou processo, como
@@ -38,20 +38,28 @@ function Cmd06({ navigation }) {
       <Image
         style={{ width: 200, height: 200 }}
         source={require("../../../../assets/sinaleirosimbolo.jpg")}
+        resizeMode="contain"
       />
 
-<Text style={styles.titulo}>Cores e funções dos sinaleiros de comando</Text>
-
+      <Text style={styles.titulo}>
+        Cores e funções dos sinaleiros de comando
+      </Text>
 
       <Text style={styles.texto}>
-      Abaixo a tabela de cores e funções específicas propostas pela norma IEC 60073:2002, que define os princípios de codificação para indicadores e atuadores.</Text>
-      <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Sinaleirotabela')}>
-      <Image
-        style={{ width: 350, height:350 }}
-        source={require("../../../../assets/sinaleirotabela.jpg")}
-      />
-</TouchableOpacity>
-
+        Abaixo a tabela de cores e funções específicas propostas pela norma IEC
+        60073:2002, que define os princípios de codificação para indicadores e
+        atuadores.
+      </Text>
+      <TouchableOpacity
+        style={styles.boxAula}
+        onPress={() => navigation.navigate("Sinaleirotabela")}
+      >
+        <Image
+          style={{ width: 350, height: 350 }}
+          source={require("../../../../assets/sinaleirotabela.jpg")}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
     </ScrollView>
   );
 }

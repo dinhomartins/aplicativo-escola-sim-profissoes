@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 
 function Cmd03({ navigation }) {
   return (
@@ -37,35 +44,46 @@ function Cmd03({ navigation }) {
       <Image
         style={styles.imagem}
         source={require("../../../../assets/botoeira1.jpg")}
+        resizeMode="contain"
       />
 
       <Image
         style={{ width: "100%", height: 140 }}
         source={require("../../../../assets/botoeira2.jpg")}
+        resizeMode="contain"
       />
 
       <Image
         style={styles.imagem}
         source={require("../../../../assets/botoeira3.jpg")}
+        resizeMode="contain"
       />
 
       <Image
         style={styles.imagem}
         source={require("../../../../assets/botoeira4.jpg")}
+        resizeMode="contain"
       />
 
-<Text style={styles.titulo}>Como identificar as funções das botoeiras através das cores?</Text>
-<Text style={styles.texto}>
-As cores das botoeiras devem seguir uma padronização, de acordo com a norma NBR IEC 60204-11, que permite identificar de forma genérica, qual a função realizada por elas. Conheça alguns exemplos:
-        </Text>
+      <Text style={styles.titulo}>
+        Como identificar as funções das botoeiras através das cores?
+      </Text>
+      <Text style={styles.texto}>
+        As cores das botoeiras devem seguir uma padronização, de acordo com a
+        norma NBR IEC 60204-11, que permite identificar de forma genérica, qual
+        a função realizada por elas. Conheça alguns exemplos:
+      </Text>
 
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Cmd03TabelaBotoeira')}>
+      <TouchableOpacity
+        style={styles.boxAula}
+        onPress={() => navigation.navigate("Cmd03TabelaBotoeira")}
+      >
         <Image
-        style={styles.imagem}
-        source={require("../../../../assets/tabelabotoeira.jpg")}
-      />
+          style={styles.imagem}
+          source={require("../../../../assets/tabelabotoeira.jpg")}
+          resizeMode="contain"
+        />
       </TouchableOpacity>
-
     </ScrollView>
   );
 }

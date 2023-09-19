@@ -27,6 +27,7 @@ function Cmd05({ navigation }) {
       <Image
         style={{ width: 200, height: 500 }}
         source={require("../../../../assets/temporizador.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.titulo}>TEMPORIZADOR</Text>
@@ -67,6 +68,7 @@ function Cmd05({ navigation }) {
       <Image
         style={{ width: 300, height: 300 }}
         source={require("../../../../assets/temp1.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.subTitulo}>
@@ -75,6 +77,7 @@ function Cmd05({ navigation }) {
       <Image
         style={{ width: 300, height: 400 }}
         source={require("../../../../assets/temp2.jpg")}
+        resizeMode="contain"
       />
     </ScrollView>
   );

@@ -15,6 +15,7 @@ function Aula05({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/cores-cabo01.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>
@@ -79,6 +80,7 @@ function Aula05({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/cores-cabo.jpg")}
+          resizeMode="contain"
         />
 
 <Image
@@ -89,6 +91,7 @@ function Aula05({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/padraocores.jpg")}
+          resizeMode="contain"
         />
       </View>
     </ScrollView>

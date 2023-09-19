@@ -21,6 +21,7 @@ function Cmd14({ navigation }) {
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/diagramareletermicocontatodesele.webp")}
+            resizeMode="contain"
           />
           
 

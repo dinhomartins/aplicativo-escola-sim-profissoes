@@ -23,6 +23,7 @@ function Cmd19({ navigation }) {
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/54.webp")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
       </View>

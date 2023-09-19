@@ -10,6 +10,7 @@ function Aula07({ navigation }) {
         <Image
           style={{ height: 300, width: "50%", marginTop: 20, marginBottom: 20 }}
           source={require("../../../../assets/qdc01.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>O que é quadro de distribuição?</Text>
@@ -40,16 +41,19 @@ function Aula07({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/qdc02.jpg")}
+          resizeMode="contain"
         />
 
         <Image
           style={{ height: 350, width: "50%", marginTop: 20, marginBottom: 20 }}
           source={require("../../../../assets/qdc03.jpg")}
+          resizeMode="contain"
         />
 
         <Image
           style={{ height: 350, width: "70%", marginTop: 20, marginBottom: 20 }}
           source={require("../../../../assets/qdc04.jpg")}
+          resizeMode="contain"
         />
       </View>
     </ScrollView>

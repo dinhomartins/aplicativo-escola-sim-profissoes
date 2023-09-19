@@ -15,6 +15,7 @@ function Aula29({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/tabela.jpg")}
+          resizeMode="contain"
         />
       </View>
     </ScrollView>

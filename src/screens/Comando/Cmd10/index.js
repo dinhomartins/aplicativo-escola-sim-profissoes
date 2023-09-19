@@ -144,6 +144,7 @@ function Cmd10({ navigation }) {
           <Image
             style={{ width: 350, height: 250 }}
             source={require("../../../../assets/fechamento.jpg")}
+            resizeMode="contain"
           />
         <Text style={styles.titulo}>
           220V ou 440V triangulo
@@ -151,6 +152,7 @@ function Cmd10({ navigation }) {
         <Image
             style={{ width: 350, height: 350 }}
             source={require("../../../../assets/fechamento2.jpg")}
+            resizeMode="contain"
           />
           <Text style={styles.titulo}>
           380V ou 760V Estrela
@@ -159,6 +161,7 @@ function Cmd10({ navigation }) {
 <Image
             style={{ width: 350, height: 350 }}
             source={require("../../../../assets/fechamento3.jpg")}
+            resizeMode="contain"
           />
 
 

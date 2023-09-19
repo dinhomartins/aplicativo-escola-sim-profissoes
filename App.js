@@ -155,7 +155,7 @@ export default function App() {
 
 <Stack.Screen name="CalculadoraPotencia" component={CalculadoraPotencia}
         options={{
-          title: 'Conceitos elétricos',
+          title: 'Cálculos Eléctricos',
           headerStyle:{
             backgroundColor: '#1F9EAF'
           },
@@ -166,7 +166,7 @@ export default function App() {
 
 <Stack.Screen name="CalculadoraBitolaCabo" component={CalculadoraBitolaCabo}
         options={{
-          title: 'Conceitos elétricos',
+          title: 'Cálculos Eléctricos',
           headerStyle:{
             backgroundColor: '#1F9EAF'
           },
@@ -177,7 +177,7 @@ export default function App() {
 
 <Stack.Screen name="CalculadoraDisjuntor" component={CalculadoraDisjuntor}
         options={{
-          title: 'Conceitos elétricos',
+          title: 'Cálculos Eléctricos',
           headerStyle:{
             backgroundColor: '#1F9EAF'
           },

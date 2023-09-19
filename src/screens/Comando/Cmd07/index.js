@@ -26,6 +26,7 @@ function Cmd07({ navigation }) {
       <Image
         style={{ width: null, height: 400 }}
         source={require("../../../../assets/botaoemergencia.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>
@@ -38,6 +39,7 @@ function Cmd07({ navigation }) {
       <Image
         style={{ width: null, height: 200 }}
         source={require("../../../../assets/btnapertando.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>
@@ -63,6 +65,7 @@ function Cmd07({ navigation }) {
       <Image
         style={{ width: null, height: 450 }}
         source={require("../../../../assets/caixabotao.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>

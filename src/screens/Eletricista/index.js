@@ -1,246 +1,381 @@
-import * as React from 'react';
-import { Button, View, Text, StyleSheet, ScrollView, Image, ImageBackground, TouchableOpacity } from 'react-native';
-// const bg = {uri: 'https://i0.wp.com/s3.sa-east-1.amazonaws.com/static.inbep.com.br/wp-content/uploads/2022/10/17154128/image-2-e1666032133196.png?resize=600%2C370&ssl=1'};
+import React, { useState, useRef } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  TouchableOpacity,
+  FlatList,
+} from "react-native";
 
-import bgeletricista from '../../../assets/bgeletricista.png'
+import bgeletricista from "../../../assets/bgeletricista.png";
+
+function debounce(fn, ms) {
+  let timer;
+  return (_) => {
+    clearTimeout(timer);
+    timer = setTimeout((_) => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
+  };
+}
+
+const cursosData = [
+  {
+    id: "1",
+    nome: "Aula 01",
+    desc: "Conceito Eletrico",
+    // imagem: require("../../../assets/eletricista.png"),
+    rota: "Aula01",
+    emBreve: false,
+  },
+  {
+    id: "2",
+    nome: "Aula 02",
+    desc: "Conceito Eletrico",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula02",
+    emBreve: false,
+  },
+  {
+    id: "3",
+    nome: "Aula 03",
+    desc: "Alicate amperimetro e multímetro",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula03",
+    emBreve: false,
+  },
+  {
+    id: "4",
+    nome: "Aula 04",
+    desc: "Alicate amperimetro e multímetro",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula04",
+    emBreve: false,
+  },
+  {
+    id: "5",
+    nome: "Aula 05",
+    desc: "Cores dos cabos",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula05",
+    emBreve: false,
+  },
+  {
+    id: "6",
+    nome: "Aula 06",
+    desc: "Disjuntores",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula06",
+    emBreve: false,
+  },
+  {
+    id: "7",
+    nome: "Aula 07",
+    desc: "QDC - Quadro de distribuição",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula07",
+    emBreve: false,
+  },
+  {
+    id: "8",
+    nome: "Aula 08",
+    desc: "IDR - Interruptor diferencia residual",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula08",
+    emBreve: false,
+  },
+  {
+    id: "9",
+    nome: "Aula 09",
+    desc: "DPS - dispositivos de proteção contra surtos",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula09",
+    emBreve: false,
+  },
+  {
+    id: "10",
+    nome: "Aula 10",
+    desc: "Diagrama QDC Monofasico",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula10",
+    emBreve: false,
+  },
+  {
+    id: "11",
+    nome: "Aula 11",
+    desc: "Diagrama QDC Bifasico",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula11",
+    emBreve: false,
+  },
+  {
+    id: "12",
+    nome: "Aula 12",
+    desc: "Diagrama QDC Trifasico",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula12",
+    emBreve: false,
+  },
+  {
+    id: "13",
+    nome: "Aula 13",
+    desc: "Diagrama QDC Trifasico sem IDR",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula13",
+    emBreve: false,
+  },
+  {
+    id: "14",
+    nome: "Aula 14",
+    desc: "Diagrama QDC Trifasico com IDR",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula14",
+    emBreve: false,
+  },
+  {
+    id: "15",
+    nome: "Aula 15",
+    desc: "Diagrama QDC Trifasico- IDR - DPS",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula15",
+    emBreve: false,
+  },
+  {
+    id: "16",
+    nome: "Aula 16",
+    desc: "Curva dos Disjuntores",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula16",
+    emBreve: false,
+  },
+  {
+    id: "17",
+    nome: "Aula 17",
+    desc: "Disjuntor Motor",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula17",
+    emBreve: false,
+  },
+  {
+    id: "18",
+    nome: "Aula 18",
+    desc: "Diagrama - Interrupr Simples",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula18",
+    emBreve: false,
+  },
+  {
+    id: "19",
+    nome: "Aula 19",
+    desc: "Diagrama - Interrupr 2 e 3 Vias",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula19",
+    emBreve: false,
+  },
+  {
+    id: "20",
+    nome: "Aula 20",
+    desc: "Three Way",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula20",
+    emBreve: false,
+  },
+  {
+    id: "21",
+    nome: "Aula 21",
+    desc: "Four Way",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula21",
+    emBreve: false,
+  },
+  {
+    id: "22",
+    nome: "Aula 22",
+    desc: "Circuito de tomada",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula22",
+    emBreve: false,
+  },
+  {
+    id: "23",
+    nome: "Aula 23",
+    desc: "Circuito de tomada conjugado com iluminação",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula23",
+    emBreve: false,
+  },
+  {
+    id: "24",
+    nome: "Aula 24",
+    desc: "Padrão de tomadas brasileiro",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula24",
+    emBreve: false,
+  },
+  {
+    id: "25",
+    nome: "Aula 25",
+    desc: "Tipos de tomadas mais utilizados no mundo",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula25",
+    emBreve: false,
+  },
+  {
+    id: "26",
+    nome: "Aula 26",
+    desc: "Relé Fotoelétrico",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula26",
+    emBreve: false,
+  },
+  {
+    id: "27",
+    nome: "Aula 27",
+    desc: "Boia",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula27",
+    emBreve: false,
+  },
+  {
+    id: "28",
+    nome: "Aula 28",
+    desc: "Descobrindo seção do cabo Ligando Chuveiro Eletrico",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula28",
+    emBreve: false,
+  },
+  {
+    id: "29",
+    nome: "Aula 29",
+    desc: "Tabela com sessão de cabos",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula29",
+    emBreve: false,
+  },
+  {
+    id: "30",
+    nome: "Aula 30",
+    desc: "Quada de tensão",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula30",
+    emBreve: false,
+  },
+  {
+    id: "31",
+    nome: "Aula 31",
+    desc: "Tabela Metodos de instalação",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula31",
+    emBreve: false,
+  },
+  {
+    id: "32",
+    nome: "Aula 32",
+    desc: "Simbologia instalações eletricas",
+    // imagem: require("../../../assets/comandoeletricocapa.png"),
+    rota: "Aula32",
+    emBreve: false,
+  },
+  // ... adicione outros cursos conforme necessário
+];
 
 function Eletricista({ navigation }) {
-    return (
-      <ScrollView>
-      <View style={styles.container}>
-        <View  style={styles.capaScreen}>
-
-        <ImageBackground source={bgeletricista} resizeMode="cover" style={styles.capa}>
-        </ImageBackground>
-        </View>
-        <Text style={styles.titulo} >Eletricista residencial</Text>
-        {/* <Button
-          title="Go to Details... again"
-          onPress={() => navigation.navigate('Home')}
-        /> */}
-        {/* Aula 01 */}
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula01')}>
-          <Text style={styles.tituloAula} >Aula 01</Text>
-          <Text style={styles.conteudoAula}>Conceitos elétricos</Text>
-        </TouchableOpacity>
-
-        {/* Aula 02 */}
-        <TouchableOpacity style={styles.boxAula } onPress={() => navigation.navigate('Aula02')} >
-          <Text style={styles.tituloAula} >Aula 02</Text>
-          <Text style={styles.conteudoAula}>Ferramentas essenciais para o eletricista</Text>
-        </TouchableOpacity>
-
-        {/* Aula 03 */}
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula03')} >
-          <Text style={styles.tituloAula} >Aula 03</Text>
-          <Text style={styles.conteudoAula}>Alicate amperimetro e 
-multímetro</Text>
-        </TouchableOpacity>
-
-
-        {/* Aula 04 */}
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula04')}>
-          <Text style={styles.tituloAula} >Aula 04</Text>
-          <Text style={styles.conteudoAula}>Medindo tensões elétricas</Text>
-        </TouchableOpacity>
-
-         {/* Aula 05*/}
-         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula05')}>
-          <Text style={styles.tituloAula} >Aula 05</Text>
-          <Text style={styles.conteudoAula}>Cores dos cabos</Text>
-        </TouchableOpacity>
-
-         {/* Aula 06*/}
-         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula06')}>
-          <Text style={styles.tituloAula} >Aula 06</Text>
-          <Text style={styles.conteudoAula}>Disjuntores</Text>
-        </TouchableOpacity>
-
-         {/* Aula 07*/}
-         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula07')}>
-          <Text style={styles.tituloAula} >Aula 07</Text>
-          <Text style={styles.conteudoAula}>QDC - Quadro de distribuição</Text>
-        </TouchableOpacity>
-
-         {/* Aula 08*/}
-         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula08')}>
-          <Text style={styles.tituloAula} >Aula 08</Text>
-          <Text style={styles.conteudoAula}>IDR - Interruptor diferencia residual</Text>
-        </TouchableOpacity>
-
-         {/* Aula 09*/}
-         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula09')}>
-          <Text style={styles.tituloAula} >Aula 09</Text>
-          <Text style={styles.conteudoAula}>DPS - dispositivos de proteção contra surtos</Text>
-        </TouchableOpacity>
-
-           {/* Aula 10*/}
-           <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula10')}>
-          <Text style={styles.tituloAula} >Aula 10</Text>
-          <Text style={styles.conteudoAula}>Diagrama QDC Monofasico</Text>
-        </TouchableOpacity>
-
-         {/* Aula 11*/}
-         <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula11')}>
-          <Text style={styles.tituloAula} >Aula 11</Text>
-          <Text style={styles.conteudoAula}>Diagrama QDC Bifasico</Text>
-        </TouchableOpacity>
-
-          {/* Aula 12*/}
-          <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula12')}>
-          <Text style={styles.tituloAula} >Aula 12</Text>
-          <Text style={styles.conteudoAula}>Diagrama QDC Trifasico</Text>
-        </TouchableOpacity>
-
-        {/* Aula 13*/}
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula13')}>
-          <Text style={styles.tituloAula} >Aula 13</Text>
-          <Text style={styles.conteudoAula}>Diagrama QDC Trifasico sem IDR</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula14')}>
-          <Text style={styles.tituloAula} >Aula 14</Text>
-          <Text style={styles.conteudoAula}>Diagrama QDC Trifasico com IDR</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula15')}>
-          <Text style={styles.tituloAula} >Aula 15</Text>
-          <Text style={styles.conteudoAula}>Diagrama QDC Trifasico- IDR - DPS</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula16')}>
-          <Text style={styles.tituloAula} >Aula 16</Text>
-          <Text style={styles.conteudoAula}>Curva dos Disjuntores</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula17')}>
-          <Text style={styles.tituloAula} >Aula 17</Text>
-          <Text style={styles.conteudoAula}>Disjuntor Motor</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula18')}>
-          <Text style={styles.tituloAula} >Aula 18</Text>
-          <Text style={styles.conteudoAula}>Diagrama - Interrupr Simples</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula19')}>
-          <Text style={styles.tituloAula} >Aula 19</Text>
-          <Text style={styles.conteudoAula}>Diagrama - Interrupr 2 e 3 Vias</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula20')}>
-          <Text style={styles.tituloAula} >Aula 20</Text>
-          <Text style={styles.conteudoAula}>Three Way</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula21')}>
-          <Text style={styles.tituloAula} >Aula 21</Text>
-          <Text style={styles.conteudoAula}>Four Way</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula22')}>
-          <Text style={styles.tituloAula} >Aula 22</Text>
-          <Text style={styles.conteudoAula}>Circuito de tomada</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula23')}>
-          <Text style={styles.tituloAula} >Aula 23</Text>
-          <Text style={styles.conteudoAula}>Circuito de tomada conjugado com iluminação</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula24')}>
-          <Text style={styles.tituloAula} >Aula 24</Text>
-          <Text style={styles.conteudoAula}>Padrão de tomadas brasileiro</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula25')}>
-          <Text style={styles.tituloAula} >Aula 25</Text>
-          <Text style={styles.conteudoAula}>Tipos de tomadas mais utilizados no mundo</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula26')}>
-          <Text style={styles.tituloAula} >Aula 26</Text>
-          <Text style={styles.conteudoAula}>Relé Fotoelétrico</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula27')}>
-          <Text style={styles.tituloAula} >Aula 27</Text>
-          <Text style={styles.conteudoAula}>Boia</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula28')}>
-          <Text style={styles.tituloAula} >Aula 28</Text>
-          <Text style={styles.conteudoAula}>Descobrindo seção do cabo Ligando Chuveiro Eletrica</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula29')}>
-          <Text style={styles.tituloAula} >Aula 29</Text>
-          <Text style={styles.conteudoAula}>Tabela com sessão de cabos</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula30')}>
-          <Text style={styles.tituloAula} >Aula 30</Text>
-          <Text style={styles.conteudoAula}>Quada de tensão</Text>
-        </TouchableOpacity>
-
-        
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula31')}>
-          <Text style={styles.tituloAula} >Aula 31</Text>
-          <Text style={styles.conteudoAula}>Tabela Metodos de instalação</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.boxAula} onPress={() => navigation.navigate('Aula32')}>
-          <Text style={styles.tituloAula} >Aula 32</Text>
-          <Text style={styles.conteudoAula}>Simbologia instalações eletricas</Text>
-        </TouchableOpacity>
-
-
-      </View>
-      </ScrollView>
-    );
-  }
-
-  const styles = StyleSheet.create({
-    container:{
-      flex: 1,
-      alignItems: 'center'
-    },
-    capaScreen:{
-      height: 200,
-      width:'100%'
-    },
-    capa:{
-      height:200,
-      width: '100%'
-    },
-    titulo:{
-      fontSize: 24,
-      paddingBottom:20,
-      paddingTop:20,
-      textAlign: 'center'
-    },
-    boxAula:{
-      width: '90%',
-      height: 120,
-      borderRadius: 8,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#1F9EAF',
-      marginBottom: 20
-    },
-    tituloAula:{
-      fontSize: 18,
-      fontWeight: 'bold',
-      color: '#fff'
-    },
-    conteudoAula:{
-      fontSize: 16,
-      color: '#fff',
-      textAlign: 'center',
-      margin: 10
+  const [hideCapa, setHideCapa] = useState(false);
+  const onScrollDebounced = debounce(() => setHideCapa(true), 100);
+  const handleScroll = (event) => {
+    if (event.nativeEvent.contentOffset.y > 0) {
+      onScrollDebounced();
     }
-    
+  };
 
-  })
+  return (
+    <View style={styles.container}>
+      {!hideCapa && (
+        <View style={styles.capaScreen}>
+          <ImageBackground
+            source={bgeletricista}
+            resizeMode="cover"
+            style={styles.capa}
+          ></ImageBackground>
+        </View>
+      )}
 
-  export default Eletricista;
+      <View style={styles.content}>
+        <FlatList
+          data={cursosData}
+          onScroll={handleScroll}
+          scrollEventThrottle={2} // controla a frequência dos eventos de rolagem
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              style={[
+                styles.boxMenu,
+                styles.shadowProp,
+                item.emBreve ? {} : { opacity: 0.9 },
+              ]}
+              onPress={() => navigation.navigate(item.rota)}
+            >
+              {/* <View style={styles.contentBoxMenuLeft}>
+      <Image style={styles.icone} source={item.imagem} />
+    </View> */}
+
+              <View style={styles.contentBoxMenu}>
+                {item.emBreve && (
+                  <Text style={styles.txtembreve}>Em breve</Text>
+                )}
+                <Text style={styles.textoBoxMenu}>{item.nome}</Text>
+                <Text style={styles.textoDesc}>{item.desc}</Text>
+              </View>
+            </TouchableOpacity>
+          )}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+  capaScreen: {
+    height: 200,
+    width: "100%",
+  },
+  capa: {
+    height: 200,
+    width: "100%",
+  },
+  boxMenu: {
+    width: "100%",
+    height: 120,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#1F9EAF",
+    marginBottom: 20,
+  },
+  content: {
+    width: "100%",
+    padding: 10,
+  },
+  contentBoxMenu: {
+    textAlign: "center",
+  },
+  textoBoxMenu: {
+    textAlign: "center",
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+  textoDesc: {
+    textAlign: "center",
+    color: "#fff",
+    fontSize: 16,
+  },
+});
+
+export default Eletricista;

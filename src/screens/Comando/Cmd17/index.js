@@ -78,6 +78,7 @@ function Cmd17({ navigation }) {
           <Image
             style={{ width: null, height: 180 }}
             source={require("../../../../assets/triangulo.jpg")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
 
@@ -98,6 +99,7 @@ function Cmd17({ navigation }) {
           <Image
             style={{ width: null, height: 180, marginTop: 40 }}
             source={require("../../../../assets/estrela.jpg")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
 

@@ -64,11 +64,13 @@ function Aula28({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/lorenzeti.png")}
+          resizeMode="contain"
         />
 
         <Image
           style={{ height: 560, width: null, marginTop: 20, marginBottom: 20 }}
           source={require("../../../../assets/chuv.jpg")}
+          resizeMode="contain"
         />
       </View>
     </ScrollView>

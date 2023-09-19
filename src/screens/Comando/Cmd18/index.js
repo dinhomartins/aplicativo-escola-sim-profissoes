@@ -23,11 +23,13 @@ function Cmd18({ navigation }) {
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/52.webp")}
+            resizeMode="contain"
           />
 
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/55.webp")}
+            resizeMode="contain"
           />
         </TouchableOpacity>
       </View>

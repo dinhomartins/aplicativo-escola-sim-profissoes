@@ -45,6 +45,7 @@ function Aula04({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/teste01.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>
@@ -73,6 +74,7 @@ function Aula04({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/teste02.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>
@@ -102,6 +104,7 @@ function Aula04({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/teste03.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>
@@ -142,6 +145,7 @@ function Aula04({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/teste04.jpg")}
+          resizeMode="contain"
         />
 
         <Image
@@ -152,6 +156,7 @@ function Aula04({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/teste05.jpg")}
+          resizeMode="contain"
         />
       </View>
     </ScrollView>

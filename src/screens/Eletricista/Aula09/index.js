@@ -15,6 +15,7 @@ function Aula09({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/dps.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>
@@ -71,6 +72,7 @@ function Aula09({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/dps01.jpg")}
+          resizeMode="contain"
         />
         <Text style={styles.subTitulo}>DPS: Classes e Funcionamento</Text>
 
@@ -187,6 +189,7 @@ function Aula09({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/dpsintalado.jpg")}
+          resizeMode="contain"
         />
       </View>
     </ScrollView>

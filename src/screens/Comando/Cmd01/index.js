@@ -26,6 +26,7 @@ function Cmd01({ navigation }) {
         <Image
           style={styles.imagem}
           source={require("../../../../assets/painelcomando.jpg")}
+          resizeMode="contain"
         />
       </View>
 
@@ -40,6 +41,7 @@ function Cmd01({ navigation }) {
       <Image
           style={styles.imagem}
           source={require("../../../../assets/painelcomando2.jpg")}
+          resizeMode="contain"
         />
 
 
@@ -53,6 +55,7 @@ function Cmd01({ navigation }) {
       <Image
           style={styles.imagem}
           source={require("../../../../assets/motor.jpg")}
+          resizeMode="contain"
         />
 
     </ScrollView>

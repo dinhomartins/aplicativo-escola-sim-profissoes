@@ -12,8 +12,10 @@ function Cmd16({ navigation }) {
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
-        <Text style={styles.tituloPrimario}>Diagrama de comando partida  para motores com contato de selo e rele termérico 
-e motor auxiliar em caso de sobrecarga</Text>
+        <Text style={styles.tituloPrimario}>
+          Diagrama de comando partida para motores com contato de selo e rele
+          termérico e motor auxiliar em caso de sobrecarga
+        </Text>
 
         <TouchableOpacity
           style={styles.boxAula}
@@ -22,9 +24,8 @@ e motor auxiliar em caso de sobrecarga</Text>
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/51diagrama.webp")}
+            resizeMode="contain"
           />
-          
-
         </TouchableOpacity>
       </View>
     </ScrollView>

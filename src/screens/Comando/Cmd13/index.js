@@ -21,10 +21,12 @@ function Cmd13({ navigation }) {
           <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/contatodeselo.webp")}
+            resizeMode="contain"
           />
               <Image
             style={{ width: null, height: 550 }}
             source={require("../../../../assets/contatodeselo02.webp")}
+            resizeMode="contain"
           />
           
 

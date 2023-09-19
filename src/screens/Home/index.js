@@ -16,51 +16,13 @@ const STYLES = ["default", "dark-content", "light-content"];
 const TRANSITIONS = ["fade", "slide", "none"];
 
 const HomeScreen = ({ navigation }) => {
-  // const [hidden, setHidden] = useState(false);
-  // const [statusBarStyle, setStatusBarStyle] = useState(STYLES[0]);
-  // const [statusBarTransition, setStatusBarTransition] = useState(
-  //   TRANSITIONS[0]
-  // );
-
-  // const changeStatusBarVisibility = () => setHidden(!hidden);
-
-  // const changeStatusBarStyle = () => {
-  //   const styleId = STYLES.indexOf(statusBarStyle) + 1;
-  //   if (styleId === STYLES.length) {
-  //     setStatusBarStyle(STYLES[0]);
-  //   } else {
-  //     setStatusBarStyle(STYLES[styleId]);
-  //   }
-  // };
-
-  // const changeStatusBarTransition = () => {
-  //   const transition = TRANSITIONS.indexOf(statusBarTransition) + 1;
-  //   if (transition === TRANSITIONS.length) {
-  //     setStatusBarTransition(TRANSITIONS[0]);
-  //   } else {
-  //     setStatusBarTransition(TRANSITIONS[transition]);
-  //   }
-  // };
-
   return (
-    // <SafeAreaView style={styles.container}>
-    //   {/* <StatusBar
-    //     animated={true}
-    //     backgroundColor="#1F9EAF"
-    //     barStyle={statusBarStyle}
-    //     showHideTransition={statusBarTransition}
-    //     hidden={hidden}
-    //   /> */}
-
     <ScrollView>
       <View style={styles.container}>
-      <StatusBar style="light" />
+        <StatusBar style="light" />
         <View style={styles.containerTopoContent}>
           <View style={styles.containerTopo}>
-            <Text style={styles.textoColor}>
-            Curso {"\n"}ElétricoPro
-  
-            </Text>
+            <Text style={styles.textoColor}>Curso {"\n"}ElétricoPro</Text>
           </View>
           <Text style={styles.tituloHome}>Calculos Eletricos</Text>
         </View>
@@ -166,7 +128,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
 
           <View style={styles.contentBoxMenu}>
-            <Text style={styles.textoBoxMenu}>Comando Eletrio</Text>
+            <Text style={styles.textoBoxMenu}>Comando Eletrico</Text>
           </View>
         </TouchableOpacity>
 
@@ -195,7 +157,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
 
           <View style={styles.contentBoxMenu}>
-          <Text style={styles.txtembreve}>Em breve</Text>
+            <Text style={styles.txtembreve}>Em breve</Text>
             <Text style={styles.textoBoxMenu}>
               Manutenção de {"\n"}Geladeira
             </Text>
@@ -211,7 +173,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
 
           <View style={styles.contentBoxMenu}>
-          <Text style={styles.txtembreve}>Em breve</Text>
+            <Text style={styles.txtembreve}>Em breve</Text>
             <Text style={styles.textoBoxMenu}>
               Manutenção de {"\n"}Maquina de lavar
             </Text>
@@ -242,11 +204,11 @@ const styles = StyleSheet.create({
     fontSize: 22,
     marginLeft: 10,
     marginTop: 10,
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
-  txtembreve:{
-color: 'gray',
-fontWeight: 'bold'
+  txtembreve: {
+    color: "gray",
+    fontWeight: "bold",
   },
   areaDeAtuacao: {
     height: 150,
@@ -276,7 +238,7 @@ fontWeight: 'bold'
     alignItems: "center",
     padding: 10,
     borderWidth: 1,
-    borderColor: '#e0e0e0'
+    borderColor: "#e0e0e0",
   },
   icone: {
     width: 80,

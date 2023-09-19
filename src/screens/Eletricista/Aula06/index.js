@@ -15,6 +15,7 @@ function Aula06({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/disjuntores.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>
@@ -43,6 +44,7 @@ function Aula06({ navigation }) {
             marginBottom: 20,
           }}
           source={require("../../../../assets/disjuntor.jpg")}
+          resizeMode="contain"
         />
 
         <Text style={styles.subTitulo}>
@@ -88,6 +90,7 @@ function Aula06({ navigation }) {
       <Image
         style={{ height: 300, width: "50%", marginTop: 20, marginBottom: 20 }}
         source={require("../../../../assets/d1.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>
@@ -101,6 +104,7 @@ function Aula06({ navigation }) {
       <Image
         style={{ height: 250, width: "100%", marginTop: 20, marginBottom: 20 }}
         source={require("../../../../assets/d2.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>
@@ -133,6 +137,7 @@ function Aula06({ navigation }) {
       <Image
         style={{ height: 300, width: "50%", marginTop: 20, marginBottom: 20 }}
         source={require("../../../../assets/d1.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>
@@ -146,6 +151,7 @@ function Aula06({ navigation }) {
       <Image
         style={{ height: 300, width: "50%", marginTop: 20, marginBottom: 20 }}
         source={require("../../../../assets/d3.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>
@@ -182,6 +188,7 @@ function Aula06({ navigation }) {
       <Image
         style={{ height: 280, width: "100%", marginTop: 20, marginBottom: 20 }}
         source={require("../../../../assets/djdimnema.jpg")}
+        resizeMode="contain"
       />
 
       <Text style={styles.texto}>
@@ -247,6 +254,7 @@ function Aula06({ navigation }) {
       <Image
         style={{ height: 280, width: "100%", marginTop: 20, marginBottom: 20 }}
         source={require("../../../../assets/djinfor.jpg")}
+        resizeMode="contain"
       />
     </ScrollView>
   );
